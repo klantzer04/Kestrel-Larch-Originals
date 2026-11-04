@@ -10,7 +10,7 @@
 {{ 'theme.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'theme.js' | asset_url }}" defer></script>
 </head>
-<body><a class="skip-link" href="#MainContent">Skip to content</a>
+<body class="design-{{ settings.design_direction | default: 'charcoal-copper' }}"><a class="skip-link" href="#MainContent">Skip to content</a>
 {% sections 'header-group' %}
 <main id="MainContent" tabindex="-1">{{ content_for_layout }}</main>
 {% sections 'footer-group' %}

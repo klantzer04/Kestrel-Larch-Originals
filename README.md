@@ -67,3 +67,7 @@ To make the chat photos accessible for setup, upload originals to Shopify **Cont
 The configured logo files were supplied as public Shopify CDN links for store `1/1096/0112/8817`. Header and footer use the native image-picker references, so merchants can replace them through the theme editor. This execution environment received HTTP 403 when fetching the CDN directly; confirm rendering in Shopify Preview. Existing header/footer section-level overrides still take priority.
 
 Logo rendering includes exact supplied CDN URL fallbacks in `snippets/approved-logo.liquid`. These display when image-picker settings do not resolve to image objects, without requiring settings-data synchronization. Valid theme-editor image selections still take precedence. No artwork transformations or background removal are applied.
+
+## Selected design: Option B — Charcoal & Copper
+
+The default design now uses a charcoal header/hero and custom invitation, copper calls to action, a warm tan featured collection band with cream product cards, and a slate craft-story band. All five palette colors retain theme-editor controls. **Theme settings → Design system → Design direction** can switch back to the original cream styling. Exact approved logos retain their supplied white backgrounds and colors; no CSS filters, redraws, or background removal are applied. The descriptive homepage heading remains unchanged. Product photos still require accessible originals or Shopify Files URLs; the concept render's generated imagery is not installed in the storefront.

@@ -1,4 +1,6 @@
+<div class="featured-band">
 <section class="section container"><div class="section-heading"><div><p class="eyebrow">CRAFTED TO BE USED, LOVED & SHARED</p><h2>{{ section.settings.heading | escape }}</h2></div></div><div class="product-grid">{% for product in section.settings.collection.products limit: section.settings.limit %}{% render 'product-card', product: product %}{% else %}{% assign samples = 'Walnut cribbage board,Everyday cutting board,Cheese slicer' | split: ',' %}{% for title in samples %}<article class="product-card">{% render 'placeholder', label: title %}<h3>{{ title }}</h3><p class="muted">Sample product · Add your catalog in Shopify</p></article>{% endfor %}{% endfor %}</div></section>
+</div>
 {% schema %}
 {
   "name": "Featured collection",

@@ -10,6 +10,22 @@
     "name": "Design system",
     "settings": [
       {
+        "type": "select",
+        "id": "design_direction",
+        "label": "Design direction",
+        "default": "charcoal-copper",
+        "options": [
+          {
+            "value": "charcoal-copper",
+            "label": "Charcoal & Copper (Option B)"
+          },
+          {
+            "value": "cream",
+            "label": "Original cream"
+          }
+        ]
+      },
+      {
         "type": "color",
         "id": "color_background",
         "label": "Background",
