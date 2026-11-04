@@ -7,3 +7,16 @@
 .brand-artwork{padding-top:40px;padding-bottom:40px}
 .brand-artwork img{width:var(--logo-width);max-width:100%;height:auto;margin:auto}
 @media(max-width:899px){.brand img{width:200px}.brand{max-width:calc(100% - 80px)}}
+
+/* Product photos retain the complete piece and engraved detail. */
+.product-image{background:#e8dfd1}
+.product-image img{aspect-ratio:1/1;object-fit:contain}
+.product-gallery img{height:auto;object-fit:contain}
+.showcase-intro{max-width:370px;color:#50565b;font-size:.95rem;margin:0}
+.showcase-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+.showcase-photo{background:#e8dfd1}
+.showcase-photo img{width:100%;height:auto;object-fit:contain}
+.showcase-caption{padding:24px 0;border-bottom:1px solid #24282d30}
+.showcase-caption h3{font:400 clamp(1.5rem,2.5vw,2rem)/1.2 Georgia,serif;letter-spacing:-.025em}
+.showcase-caption p{font-size:.9rem;max-width:440px;color:#50565b}
+@media(max-width:899px){.showcase-grid{grid-template-columns:1fr;gap:32px}}

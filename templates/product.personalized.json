@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "personalization": true,
+        "personalization_note": "Enter the names, initials or wording exactly as requested. For artwork, special layouts or custom pricing, contact us before ordering."
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

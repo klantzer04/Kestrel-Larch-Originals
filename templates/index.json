@@ -58,12 +58,38 @@
     },
     "custom": {
       "type": "custom-callout"
+    },
+    "work": {
+      "type": "custom-work-showcase",
+      "blocks": {
+        "game": {
+          "type": "piece",
+          "settings": {
+            "title": "Custom game boards",
+            "description": "A gathering piece with room for a personal design.",
+            "alt": "Octagonal wooden game board with a Trailside Supply Co. design"
+          }
+        },
+        "cutting": {
+          "type": "piece",
+          "settings": {
+            "title": "Personalized cutting boards",
+            "description": "A familiar kitchen essential, made personal.",
+            "alt": "End-grain cutting board with Preston and Helen Anderson personalization"
+          }
+        }
+      },
+      "block_order": [
+        "game",
+        "cutting"
+      ]
     }
   },
   "order": [
     "hero",
     "categories",
     "featured",
+    "work",
     "story",
     "custom"
   ]
