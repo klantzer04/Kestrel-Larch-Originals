@@ -6,8 +6,9 @@
 <title>{{ page_title | escape }}{% unless page_title contains shop.name %} — {{ shop.name | escape }}{% endunless %}</title>
 {% if page_description %}<meta name="description" content="{{ page_description | escape }}">{% endif %}
 {{ content_for_header }}
-{% style %}:root{--cream:{{ settings.color_background }};--charcoal:{{ settings.color_text }};--slate:{{ settings.color_accent }};--copper:{{ settings.color_copper }};--tan:{{ settings.color_tan }};--width:{{ settings.page_width }}px}{% endstyle %}
+{% style %}:root{--cream:{{ settings.color_background | default: '#F3EEE5' }};--charcoal:{{ settings.color_text | default: '#24282D' }};--slate:{{ settings.color_accent | default: '#526F82' }};--copper:{{ settings.color_copper | default: '#B74E28' }};--tan:{{ settings.color_tan | default: '#B78D68' }};--width:{{ settings.page_width | default: 1280 }}px}{% endstyle %}
 {{ 'theme.css' | asset_url | stylesheet_tag }}
+{% unless settings.design_direction == 'cream' %}{{ 'charcoal-copper.css' | asset_url | stylesheet_tag }}{% endunless %}
 <script src="{{ 'theme.js' | asset_url }}" defer></script>
 </head>
 <body class="design-{{ settings.design_direction | default: 'charcoal-copper' }}"><a class="skip-link" href="#MainContent">Skip to content</a>
