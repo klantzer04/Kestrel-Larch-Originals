@@ -13,8 +13,12 @@
         "type": "select",
         "id": "design_direction",
         "label": "Design direction",
-        "default": "charcoal-copper",
+        "default": "soft-slate",
         "options": [
+          {
+            "value": "soft-slate",
+            "label": "Soft Slate (E3)"
+          },
           {
             "value": "charcoal-copper",
             "label": "Charcoal & Copper (Option B)"

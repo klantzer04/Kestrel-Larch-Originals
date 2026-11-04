@@ -8,10 +8,14 @@
 {{ content_for_header }}
 {% style %}:root{--cream:{{ settings.color_background | default: '#F3EEE5' }};--charcoal:{{ settings.color_text | default: '#24282D' }};--slate:{{ settings.color_accent | default: '#526F82' }};--copper:{{ settings.color_copper | default: '#B74E28' }};--tan:{{ settings.color_tan | default: '#B78D68' }};--width:{{ settings.page_width | default: 1280 }}px}{% endstyle %}
 {{ 'theme.css' | asset_url | stylesheet_tag }}
-{% unless settings.design_direction == 'cream' %}{{ 'charcoal-copper.css' | asset_url | stylesheet_tag }}{% endunless %}
+{% if settings.design_direction == 'charcoal-copper' %}
+  {{ 'charcoal-copper.css' | asset_url | stylesheet_tag }}
+{% elsif settings.design_direction != 'cream' %}
+  {{ 'soft-slate.css' | asset_url | stylesheet_tag }}
+{% endif %}
 <script src="{{ 'theme.js' | asset_url }}" defer></script>
 </head>
-<body class="design-{{ settings.design_direction | default: 'charcoal-copper' }}"><a class="skip-link" href="#MainContent">Skip to content</a>
+<body class="design-{{ settings.design_direction | default: 'soft-slate' }}"><a class="skip-link" href="#MainContent">Skip to content</a>
 {% sections 'header-group' %}
 <main id="MainContent" tabindex="-1">{{ content_for_layout }}</main>
 {% sections 'footer-group' %}

@@ -1,0 +1,71 @@
+/* E3 — Soft Slate: cream canvas, original logos on white, restrained copper. */
+.design-soft-slate .site-header{background:#fff;color:var(--charcoal);border-bottom:1px solid var(--tan)}
+.design-soft-slate .header-inner{min-height:116px;gap:28px}
+.design-soft-slate .brand{flex-shrink:0}
+.design-soft-slate .brand img{width:250px}
+.design-soft-slate .navigation a{letter-spacing:.025em}
+.design-soft-slate .navigation a:hover{color:var(--copper)}
+.design-soft-slate .hero-band{background:var(--cream);color:var(--charcoal)}
+.design-soft-slate .hero{grid-template-columns:1fr 1.1fr;padding-top:76px;padding-bottom:76px;gap:72px}
+.design-soft-slate .hero h1{font-size:clamp(2.6rem,4.6vw,4.7rem);line-height:1.08;max-width:650px}
+.design-soft-slate .hero .eyebrow{color:var(--charcoal);font-size:.65rem}
+.design-soft-slate .hero h1::after{content:'';display:block;width:72px;height:2px;background:var(--tan);margin-top:28px}
+.design-soft-slate .hero .lede{color:var(--charcoal);max-width:400px;font-size:1rem}
+.design-soft-slate .hero-image{isolation:isolate;padding:20px 20px 0 0}
+.design-soft-slate .hero-image::before{content:'';position:absolute;inset:0 0 40px 26px;background:var(--slate);z-index:-1}
+.design-soft-slate .hero-image img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+.design-soft-slate .hero-image .photo-placeholder{aspect-ratio:1/1;min-height:280px}
+.design-soft-slate .image-caption{color:var(--charcoal);padding:10px 0 0;letter-spacing:.1em}
+.design-soft-slate .hero-note{color:var(--charcoal);margin-top:30px}
+.design-soft-slate .button{background:var(--copper);border-color:var(--copper);color:#fff;font-weight:600;letter-spacing:.02em}
+.design-soft-slate .button:hover{background:var(--charcoal);border-color:var(--charcoal)}
+.design-soft-slate .button.secondary{background:transparent;color:var(--charcoal);border-color:var(--charcoal)}
+.design-soft-slate :focus-visible{outline-color:var(--copper)}
+.design-soft-slate .category-grid{gap:24px}
+.design-soft-slate .category-card{background:#fff;border-bottom:1px solid var(--tan)}
+.design-soft-slate .category-image img{aspect-ratio:1/1;object-fit:contain;background:#fff}
+.design-soft-slate .category-card h3{margin:0;padding:16px 14px;background:var(--slate);color:var(--cream);font:400 1.15rem/1.35 Georgia,serif}
+.design-soft-slate .category-card h3 span{color:var(--cream)}
+.design-soft-slate .category-card p{padding:14px;margin:0;color:var(--charcoal)}
+.design-soft-slate .featured-band{background:var(--cream);border-top:1px solid var(--tan)}
+.design-soft-slate .featured-band .section{padding-top:64px}
+.design-soft-slate .featured-band .section-heading{justify-content:center;text-align:center}
+.design-soft-slate .featured-band .section-heading h2{font-size:clamp(2rem,3.5vw,3rem)}
+.design-soft-slate .product-card{background:#fff}
+.design-soft-slate .product-card-meta{margin:0;padding:18px;background:var(--slate);color:var(--cream);align-items:start}
+.design-soft-slate .product-card-meta h3{font:400 1.2rem/1.4 Georgia,serif;margin:0}
+.design-soft-slate .product-card>h3{padding:0 18px}
+.design-soft-slate .product-card>.muted{padding:0 18px 18px}
+.design-soft-slate .product-image{background:#fff}
+.design-soft-slate .work-showcase{border-top:1px solid var(--tan)}
+.design-soft-slate .showcase-photo{background:#fff}
+.design-soft-slate .showcase-caption{border-color:var(--tan)}
+.design-soft-slate .story-band{background:#fff;color:var(--charcoal);border-top:1px solid var(--tan);padding:64px 0}
+.design-soft-slate .story-band .eyebrow{color:var(--charcoal)}
+.design-soft-slate .story-band h2{font-size:clamp(2rem,3.5vw,3rem)}
+.design-soft-slate .custom-band{background:var(--slate);color:var(--cream)}
+.design-soft-slate .custom-callout{max-width:950px;padding-top:64px;padding-bottom:64px}
+.design-soft-slate .custom-callout h2{font-size:clamp(2.4rem,4.4vw,4rem)}
+.design-soft-slate .custom-band :focus-visible{outline-color:var(--cream)}
+.design-soft-slate .site-footer{background:#fff;color:var(--charcoal);border-top:1px solid var(--tan)}
+.design-soft-slate .footer-brand{width:180px;padding:0;border:0}
+.design-soft-slate .footer-grid h2{font-size:2rem}
+.design-soft-slate .footer-bottom{color:var(--charcoal);border-color:var(--tan)}
+@media(max-width:1100px){
+ .design-soft-slate .header-inner{gap:20px}
+ .design-soft-slate .brand img{width:210px}
+ .design-soft-slate .hero{gap:40px}
+}
+@media(max-width:899px){
+ .design-soft-slate .header-inner{min-height:96px}
+ .design-soft-slate .brand img{width:200px}
+ .design-soft-slate .hero{grid-template-columns:1fr;padding-top:34px;padding-bottom:48px;gap:28px}
+ .design-soft-slate .hero h1{font-size:clamp(2.6rem,8vw,4.5rem)}
+ .design-soft-slate .hero-image{padding:16px 16px 0 0}
+ .design-soft-slate .hero-image::before{inset:0 0 40px 20px}
+ .design-soft-slate .hero-image .photo-placeholder{min-height:240px}
+ .design-soft-slate .navigation nav{border-top:1px solid var(--tan);margin-top:14px}
+ .design-soft-slate .category-grid{gap:16px}
+ .design-soft-slate .category-card h3{font-size:1.05rem;padding:14px 10px}
+ .design-soft-slate .custom-callout{padding-top:48px;padding-bottom:48px}
+}

@@ -71,3 +71,7 @@ Logo rendering includes exact supplied CDN URL fallbacks in `snippets/approved-l
 ## Selected design: Option B — Charcoal & Copper
 
 The default design now uses a charcoal header/hero and custom invitation, copper calls to action, a warm tan featured collection band with cream product cards, and a slate craft-story band. All five palette colors retain theme-editor controls. **Theme settings → Design system → Design direction** can switch back to the original cream styling. Exact approved logos retain their supplied white backgrounds and colors; no CSS filters, redraws, or background removal are applied. The descriptive homepage heading remains unchanged. Product photos still require accessible originals or Shopify Files URLs; the concept render's generated imagery is not installed in the storefront.
+
+## Current selected design: E3 — Soft Slate
+
+Soft Slate is explicitly selected in saved theme settings and is the schema/layout default. It loads `assets/soft-slate.css` independently of Option B. The design uses cream hero copy, an offset slate image frame, slate category labels, a slate custom inquiry band, copper buttons, and white header/footer logo areas. All approved logo files remain untouched, including their original backgrounds. The approved main heading is unchanged. Switch design directions under **Theme settings → Design system**; the previous charcoal and cream options remain available. Actual product photography is still pending Shopify Files links; concept artwork is not installed as product imagery.
