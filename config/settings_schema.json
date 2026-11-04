@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Theme information",
+    "theme_name": "Kestrel Larch Originals",
+    "theme_version": "0.1.0",
+    "theme_author": "Kestrel Larch Originals",
+    "theme_documentation_url": "https://shopify.dev/docs/storefronts/themes"
+  },
+  {
+    "name": "Design system",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_background",
+        "label": "Background",
+        "default": "#F3EEE5"
+      },
+      {
+        "type": "color",
+        "id": "color_text",
+        "label": "Text",
+        "default": "#24282D"
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Slate blue",
+        "default": "#526F82"
+      },
+      {
+        "type": "color",
+        "id": "color_copper",
+        "label": "Burnt copper",
+        "default": "#B74E28"
+      },
+      {
+        "type": "color",
+        "id": "color_tan",
+        "label": "Warm tan",
+        "default": "#B78D68"
+      },
+      {
+        "type": "range",
+        "id": "page_width",
+        "label": "Content width",
+        "min": 960,
+        "max": 1600,
+        "step": 40,
+        "unit": "px",
+        "default": 1280
+      }
+    ]
+  },
+  {
+    "name": "Approved brand assets",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Upload the four exact approved files. Artwork is displayed without cropping, recoloring, tracing, or background removal."
+      },
+      {
+        "type": "image_picker",
+        "id": "brand_horizontal",
+        "label": "Horizontal logo \u2014 header"
+      },
+      {
+        "type": "image_picker",
+        "id": "brand_stacked",
+        "label": "Stacked logo \u2014 footer"
+      },
+      {
+        "type": "image_picker",
+        "id": "brand_mark",
+        "label": "Bird and tree mark"
+      },
+      {
+        "type": "image_picker",
+        "id": "brand_badge",
+        "label": "Circular badge"
+      }
+    ]
+  }
+]

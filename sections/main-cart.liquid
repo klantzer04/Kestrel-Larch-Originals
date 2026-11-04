@@ -1,0 +1,7 @@
+<section class="section container"><h1>Your bag</h1>{% if cart.empty? %}<p>Your next favorite piece is waiting.</p><a class="button" href="{{ routes.all_products_collection_url }}">Explore the collection</a>{% else %}<form action="{{ routes.cart_url }}" method="post">{% for item in cart.items %}<div class="cart-row"><a href="{{ item.url }}">{{ item.product.title | escape }}<small>{{ item.variant.title | escape }}</small></a><div>{% for property in item.properties %}{% assign first_character = property.first | slice: 0 %}{% if property.last != blank and first_character != '_' %}<p>{{ property.first | escape }}: {{ property.last | escape }}</p>{% endif %}{% endfor %}<label for="Qty-{{ forloop.index }}">Quantity</label><input id="Qty-{{ forloop.index }}" type="number" name="updates[]" value="{{ item.quantity }}" min="0"><a href="{{ item.url_to_remove }}">Remove</a></div><span>{{ item.final_line_price | money }}</span></div>{% endfor %}<p>Subtotal: {{ cart.total_price | money }}</p><p class="muted">Shipping and taxes calculated at checkout.</p><button type="submit" name="update" class="button secondary">Update bag</button><button type="submit" name="checkout" class="button">Checkout</button></form>{% endif %}</section>
+{% schema %}
+{
+  "name": "Cart",
+  "settings": []
+}
+{% endschema %}

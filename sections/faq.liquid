@@ -1,0 +1,30 @@
+<section class="section container narrow"><h1>{{ page.title | default: 'Frequently asked questions' | escape }}</h1><div class="richtext">{{ page.content }}</div>{% for block in section.blocks %}<details class="faq" {{ block.shopify_attributes }}><summary>{{ block.settings.question | escape }}</summary><div class="richtext">{{ block.settings.answer }}</div></details>{% endfor %}</section>
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "question",
+      "name": "Question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ"
+    }
+  ]
+}
+{% endschema %}

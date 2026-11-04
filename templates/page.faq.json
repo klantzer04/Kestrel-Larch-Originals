@@ -1,0 +1,38 @@
+{
+  "sections": {
+    "main": {
+      "type": "faq",
+      "blocks": {
+        "care": {
+          "type": "question",
+          "settings": {
+            "question": "How should I care for my wood pieces?",
+            "answer": "<p>Follow the care guidance supplied with your piece. Contact us for product-specific advice before using oils, cleaners, or dishwasher cycles.</p>"
+          }
+        },
+        "custom": {
+          "type": "question",
+          "settings": {
+            "question": "Can I request a custom piece?",
+            "answer": "<p>Yes. Share your idea through our custom order inquiry page. Availability, pricing and timing are confirmed individually before an order is placed.</p>"
+          }
+        },
+        "variation": {
+          "type": "question",
+          "settings": {
+            "question": "Will my piece look exactly like the photo?",
+            "answer": "<p>Wood grain and color naturally vary. Product photos represent the design; each piece has its own character.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "care",
+        "custom",
+        "variation"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

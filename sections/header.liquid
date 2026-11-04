@@ -1,0 +1,23 @@
+<header class="site-header"><div class="container header-inner">
+{% assign header_logo = section.settings.logo | default: settings.brand_horizontal %}
+<a class="brand" href="{{ routes.root_url }}">{% if header_logo != blank %}{{ header_logo | image_url: width: 880 | image_tag: widths: '220, 440, 660, 880', sizes: '(min-width: 900px) 280px, 200px', width: header_logo.width, height: header_logo.height, alt: shop.name }}{% else %}<span>Kestrel Larch<span class="brand-sub">ORIGINALS · HANDCRAFTED WOODWORK</span></span>{% endif %}</a>
+<details class="navigation" open><summary>Menu</summary><nav aria-label="Main navigation">{% if section.settings.menu != blank %}{% for link in section.settings.menu.links %}<a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>{% endfor %}{% else %}<a href="{{ routes.all_products_collection_url }}">Shop</a><a href="/pages/completed-projects">Our work</a><a href="/pages/about">Our story</a><a href="/pages/custom-order">Custom orders</a>{% endif %}</nav></details>
+<a class="cart-link" href="{{ routes.cart_url }}">Bag <span>({{ cart.item_count }})</span></a>
+</div></header>
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Approved logo asset (exact file only)"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Main menu"
+    }
+  ]
+}
+{% endschema %}

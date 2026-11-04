@@ -1,0 +1,7 @@
+<section class="section container narrow"><h1>{{ page.title | default: 'Get in touch' | escape }}</h1><div class="richtext">{{ page.content }}</div>{% form 'contact' %}{% if form.posted_successfully? %}<p role="status">Thank you. Your message was sent.</p>{% else %}{{ form.errors | default_errors }}<label for="ContactName">Name</label><input id="ContactName" name="contact[name]" autocomplete="name" value="{{ form.name | escape }}" required><label for="ContactEmail">Email</label><input id="ContactEmail" type="email" name="contact[email]" autocomplete="email" value="{{ form.email | escape }}" required><label for="ContactBody">Message</label><textarea id="ContactBody" name="contact[body]" rows="6" required>{{ form.body | escape }}</textarea><button class="button" type="submit">Send message</button>{% endif %}{% endform %}</section>
+{% schema %}
+{
+  "name": "Contact form",
+  "settings": []
+}
+{% endschema %}

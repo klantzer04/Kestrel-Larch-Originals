@@ -1,0 +1,20 @@
+<section class="section container product-layout"><div class="product-gallery">{% for media in product.media %}{% case media.media_type %}{% when 'image' %}{{ media | image_url: width: 1600 | image_tag: widths: '600, 1000, 1600', sizes: '(min-width: 900px) 55vw, 100vw', loading: 'lazy' }}{% when 'video' %}{{ media | video_tag: controls: true }}{% when 'external_video' %}{{ media | external_video_tag }}{% when 'model' %}{{ media | model_viewer_tag }}{% endcase %}{% else %}{% render 'placeholder', label: product.title %}{% endfor %}</div><div class="product-details"><p class="eyebrow">KESTREL LARCH ORIGINALS</p><h1>{{ product.title | escape }}</h1><div class="richtext">{{ product.description }}</div>{% form 'product', product %}<label for="Variant-{{ section.id }}">Choose your option</label><select id="Variant-{{ section.id }}" name="id">{% for variant in product.variants %}<option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %} {% unless variant.available %}disabled{% endunless %}>{{ variant.title | escape }} — {{ variant.price | money }}{% unless variant.available %} · Sold out{% endunless %}</option>{% endfor %}</select>{% if section.settings.personalization %}<label for="Personalization-{{ section.id }}">Personalization (optional)</label><input id="Personalization-{{ section.id }}" name="properties[Personalization]" maxlength="120" placeholder="Your text, exactly as it should appear"><p class="muted">{{ section.settings.personalization_note | escape }}</p>{% endif %}<label for="Quantity-{{ section.id }}">Quantity</label><input id="Quantity-{{ section.id }}" type="number" name="quantity" min="1" value="1"><button class="button" type="submit" {% unless product.available %}disabled{% endunless %}>{% if product.available %}Add to bag{% else %}Sold out{% endif %}</button>{{ form.errors | default_errors }}{% endform %}<p class="muted">Natural grain and color vary from piece to piece.</p></div></section>
+{% schema %}
+{
+  "name": "Product",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "personalization",
+      "label": "Enable personalization field",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "personalization_note",
+      "label": "Personalization guidance",
+      "default": "Available only on eligible products. Contact us for artwork or custom pricing."
+    }
+  ]
+}
+{% endschema %}

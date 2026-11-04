@@ -1,0 +1,13 @@
+{
+  "name": "kestrel-larch-originals-theme",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "shopify theme dev",
+    "check": "shopify theme check",
+    "test": "node tests/theme.test.mjs"
+  },
+  "devDependencies": {
+    "@shopify/cli": "3.91.0"
+  }
+}

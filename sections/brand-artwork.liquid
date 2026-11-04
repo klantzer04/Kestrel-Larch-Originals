@@ -1,0 +1,23 @@
+{% assign artwork = settings.brand_badge %}
+{% case section.settings.version %}
+  {% when 'horizontal' %}{% assign artwork = settings.brand_horizontal %}
+  {% when 'stacked' %}{% assign artwork = settings.brand_stacked %}
+  {% when 'mark' %}{% assign artwork = settings.brand_mark %}
+{% endcase %}
+{% if artwork != blank %}
+<section class="container brand-artwork" style="--logo-width: {{ section.settings.width }}px">
+  {{ artwork | image_url: width: 1200 | image_tag: widths: '200, 400, 800, 1200', sizes: '(max-width: 600px) 85vw, 600px', loading: 'lazy', alt: shop.name }}
+</section>
+{% elsif request.design_mode %}
+<div class="container notice">Choose the exact approved logo files in Theme settings → Approved brand assets.</div>
+{% endif %}
+{% schema %}
+{
+  "name": "Approved brand artwork",
+  "settings": [
+    {"type":"select","id":"version","label":"Logo version","default":"badge","options":[{"value":"horizontal","label":"Horizontal"},{"value":"stacked","label":"Stacked"},{"value":"mark","label":"Bird and tree mark"},{"value":"badge","label":"Circular badge"}]},
+    {"type":"range","id":"width","label":"Maximum display width","min":100,"max":600,"step":20,"unit":"px","default":240}
+  ],
+  "presets":[{"name":"Approved brand artwork"}]
+}
+{% endschema %}

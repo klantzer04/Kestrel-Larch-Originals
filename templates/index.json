@@ -1,0 +1,70 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero"
+    },
+    "categories": {
+      "type": "categories",
+      "blocks": {
+        "0": {
+          "type": "category",
+          "settings": {
+            "title": "Cribbage boards",
+            "caption": "A little friendly competition."
+          }
+        },
+        "1": {
+          "type": "category",
+          "settings": {
+            "title": "Cutting boards",
+            "caption": "At the heart of the kitchen."
+          }
+        },
+        "2": {
+          "type": "category",
+          "settings": {
+            "title": "Cheese slicers",
+            "caption": "Something worth sharing."
+          }
+        },
+        "3": {
+          "type": "category",
+          "settings": {
+            "title": "Coasters",
+            "caption": "A place for your pause."
+          }
+        },
+        "4": {
+          "type": "category",
+          "settings": {
+            "title": "Custom projects",
+            "caption": "An idea made personal."
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "featured": {
+      "type": "featured-products"
+    },
+    "story": {
+      "type": "brand-story"
+    },
+    "custom": {
+      "type": "custom-callout"
+    }
+  },
+  "order": [
+    "hero",
+    "categories",
+    "featured",
+    "story",
+    "custom"
+  ]
+}

@@ -1,0 +1,7 @@
+<section class="section container"><p class="eyebrow">THE COLLECTION</p><h1>{{ collection.title | escape }}</h1><div class="richtext">{{ collection.description }}</div>{% paginate collection.products by 24 %}<div class="product-grid">{% for product in collection.products %}{% render 'product-card', product: product %}{% else %}<p>No pieces here yet. Please check back soon.</p>{% endfor %}</div>{{ paginate | default_pagination }}{% endpaginate %}</section>
+{% schema %}
+{
+  "name": "Collection",
+  "settings": []
+}
+{% endschema %}
