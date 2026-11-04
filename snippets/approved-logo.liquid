@@ -1,0 +1,20 @@
+{% comment %}Keep exact approved CDN originals as fallbacks when Shopify Files settings are unresolved.{% endcomment %}
+{% assign logo_loading = loading | default: 'lazy' %}
+{% if image != blank and image.width != blank %}
+  {{ image | image_url: width: 1200 | image_tag: widths: '220, 440, 880, 1200', sizes: '(min-width: 900px) 280px, 200px', loading: logo_loading, alt: shop.name }}
+{% else %}
+  {% assign logo_width = 1600 %}
+  {% assign logo_height = 1600 %}
+  {% case version %}
+    {% when 'horizontal' %}
+      {% assign logo_url = 'https://cdn.shopify.com/s/files/1/1096/0112/8817/files/Logo_Horizontal.png?v=1793777066' %}
+      {% assign logo_width = 2048 %}{% assign logo_height = 704 %}
+    {% when 'stacked' %}
+      {% assign logo_url = 'https://cdn.shopify.com/s/files/1/1096/0112/8817/files/Logo_Stacked.png?v=1793777085' %}
+    {% when 'mark' %}
+      {% assign logo_url = 'https://cdn.shopify.com/s/files/1/1096/0112/8817/files/Logo.png?v=1793777051' %}
+    {% else %}
+      {% assign logo_url = 'https://cdn.shopify.com/s/files/1/1096/0112/8817/files/Logo_Badge.png?v=1793777030' %}
+  {% endcase %}
+  <img src="{{ logo_url }}" alt="{{ shop.name | escape }}" width="{{ logo_width }}" height="{{ logo_height }}" loading="{{ logo_loading }}">
+{% endif %}
