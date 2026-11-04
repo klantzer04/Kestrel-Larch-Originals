@@ -1,7 +1,10 @@
 {
   "sections": {
     "hero": {
-      "type": "hero"
+      "type": "hero",
+      "settings": {
+        "heading": "Handcrafted woodwork & custom pieces."
+      }
     },
     "categories": {
       "type": "categories",
