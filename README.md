@@ -52,7 +52,7 @@ No theme has been published and no payments have been enabled. Use the existing 
 
 ## Supplied logo versions
 
-The four approved versions shown in chat are: stacked wordmark, horizontal wordmark, bird/tree mark, and circular badge. The original attachment files are not mounted in this workspace, so no logo image files have been copied into the theme. Do not substitute a redraw.
+The four approved versions shown in chat are: stacked wordmark, horizontal wordmark, bird/tree mark, and circular badge. The four originals are now connected using Shopify Files references in `config/settings_data.json`: `Logo_Horizontal.png`, `Logo_Stacked.png`, `Logo.png` (mark), and `Logo_Badge.png`. These references resolve in the Kestrel Larch store; the original image bytes are not bundled in Git. Do not substitute a redraw.
 
 In Shopify’s theme editor, open **Theme settings → Approved brand assets** and upload each original file into its named slot. The horizontal logo automatically appears in the header and the stacked logo in the footer. Existing section logo overrides take priority; clear those to use the shared assets. Add an **Approved brand artwork** section to any compatible JSON page to display the mark, circular badge, or either wordmark. Each placement preserves the entire image, its original colors, aspect ratio, and supplied background. The white backgrounds visible in these supplied versions will remain visible; use a separately approved transparent original if desired. No image is automatically cropped into a favicon.
 
@@ -62,4 +62,6 @@ The homepage includes **Custom work showcase**, prepared for the supplied Trails
 
 For the wider photo set: use single-product photos for product cards and full collages as secondary product media or project-gallery entries. The custom cutting board is suitable for the `product.personalized` template. Create actual products as drafts until prices, dimensions, wood species, inventory and fulfillment details are confirmed. Do not treat third-party branded examples as in-stock catalog products automatically.
 
-To make the chat photos accessible for setup, upload originals to Shopify **Content → Files** and share their public CDN links, or attach a downloadable ZIP of the originals. Inline chat images are visible for reference but are not mounted as asset files in this workspace. No photo files have been embedded yet.
+To make the chat photos accessible for setup, upload originals to Shopify **Content → Files** and share their public CDN links, or attach a downloadable ZIP of the originals. Inline chat images are visible for reference but are not mounted as asset files in this workspace. No product photo files have been embedded yet. Approved logo Files references are configured separately.
+
+The configured logo files were supplied as public Shopify CDN links for store `1/1096/0112/8817`. Header and footer use the native image-picker references, so merchants can replace them through the theme editor. This execution environment received HTTP 403 when fetching the CDN directly; confirm rendering in Shopify Preview. Existing header/footer section-level overrides still take priority.
