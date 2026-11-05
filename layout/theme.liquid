@@ -6,16 +6,18 @@
 <title>{{ page_title | escape }}{% unless page_title contains shop.name %} — {{ shop.name | escape }}{% endunless %}</title>
 {% if page_description %}<meta name="description" content="{{ page_description | escape }}">{% endif %}
 {{ content_for_header }}
-{% style %}:root{--cream:{{ settings.color_background | default: '#F3EEE5' }};--charcoal:{{ settings.color_text | default: '#24282D' }};--slate:{{ settings.color_accent | default: '#526F82' }};--copper:{{ settings.color_copper | default: '#B74E28' }};--tan:{{ settings.color_tan | default: '#B78D68' }};--width:{{ settings.page_width | default: 1280 }}px}{% endstyle %}
+{% style %}:root{--cream:{{ settings.color_background | default: '#F3EEE5' }};--charcoal:{{ settings.color_text | default: '#24282D' }};--slate:{{ settings.color_accent | default: '#526F82' }};--copper:{{ settings.color_copper | default: '#B74E28' }};--tan:{{ settings.color_tan | default: '#B78D68' }};--midnight:{{ settings.color_midnight | default: '#192832' }};--width:{{ settings.page_width | default: 1280 }}px}{% endstyle %}
 {{ 'theme.css' | asset_url | stylesheet_tag }}
 {% if settings.design_direction == 'charcoal-copper' %}
   {{ 'charcoal-copper.css' | asset_url | stylesheet_tag }}
-{% elsif settings.design_direction != 'cream' %}
+{% elsif settings.design_direction == 'soft-slate' %}
   {{ 'soft-slate.css' | asset_url | stylesheet_tag }}
+{% elsif settings.design_direction != 'cream' %}
+  {{ 'midnight-slate.css' | asset_url | stylesheet_tag }}
 {% endif %}
 <script src="{{ 'theme.js' | asset_url }}" defer></script>
 </head>
-<body class="design-{{ settings.design_direction | default: 'soft-slate' }}"><a class="skip-link" href="#MainContent">Skip to content</a>
+<body class="design-{{ settings.design_direction | default: 'midnight-slate' }}"><a class="skip-link" href="#MainContent">Skip to content</a>
 {% sections 'header-group' %}
 <main id="MainContent" tabindex="-1">{{ content_for_layout }}</main>
 {% sections 'footer-group' %}

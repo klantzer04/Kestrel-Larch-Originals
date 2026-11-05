@@ -4,11 +4,12 @@
     "brand_stacked": "shopify://shop_images/Logo_Stacked.png",
     "brand_mark": "shopify://shop_images/Logo.png",
     "brand_badge": "shopify://shop_images/Logo_Badge.png",
-    "design_direction": "soft-slate",
+    "design_direction": "midnight-slate",
     "color_background": "#F3EEE5",
     "color_text": "#24282D",
     "color_accent": "#526F82",
     "color_copper": "#B74E28",
-    "color_tan": "#B78D68"
+    "color_tan": "#B78D68",
+    "color_midnight": "#192832"
   }
 }

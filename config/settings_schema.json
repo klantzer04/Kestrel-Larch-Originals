@@ -13,8 +13,12 @@
         "type": "select",
         "id": "design_direction",
         "label": "Design direction",
-        "default": "soft-slate",
+        "default": "midnight-slate",
         "options": [
+          {
+            "value": "midnight-slate",
+            "label": "Midnight Slate (K)"
+          },
           {
             "value": "soft-slate",
             "label": "Soft Slate (E3)"
@@ -68,6 +72,12 @@
         "step": 40,
         "unit": "px",
         "default": 1280
+      },
+      {
+        "type": "color",
+        "id": "color_midnight",
+        "label": "Midnight Slate background",
+        "default": "#192832"
       }
     ]
   },
