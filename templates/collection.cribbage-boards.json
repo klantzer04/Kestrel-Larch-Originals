@@ -11,34 +11,29 @@
   "sections": {
     "main": {
       "type": "main-collection-studio",
-      "settings": {
-        "eyebrow": "GATHER ROUND",
-        "intro": "A game-night favorite with expressive wood grain and room for personal details.",
-        "hero_image": "shopify://shop_images/KLO_Category_Cribbage_Boards_01.png"
-      },
       "blocks": {
         "example1": {
           "type": "inspiration",
           "settings": {
-            "title": "Personalized walnut",
-            "caption": "A familiar game made personal.",
-            "image": "shopify://shop_images/KLO_Product_05_Personalized_Walnut_Cribbage_Board.png"
+            "image": "shopify://shop_images/KLO_Product_05_Personalized_Walnut_Cribbage_Board.png",
+            "title": "Personalized",
+            "caption": "A familiar game made personal."
           }
         },
         "example2": {
           "type": "inspiration",
           "settings": {
+            "image": "shopify://shop_images/KLO_Product_06_Two_Tone_Cribbage_Board.png",
             "title": "Two-tone details",
-            "caption": "Contrasting woods and a crafted finish.",
-            "image": "shopify://shop_images/KLO_Product_06_Two_Tone_Cribbage_Board.png"
+            "caption": "Contrasting woods and a crafted finish."
           }
         },
         "example3": {
           "type": "inspiration",
           "settings": {
-            "title": "Round walnut",
-            "caption": "Classic play in a striking silhouette.",
-            "image": "shopify://shop_images/KLO_Product_07_Round_Walnut_Cribbage_Board.png"
+            "image": "shopify://shop_images/KLO_Product_07_Round_Walnut_Cribbage_Board.png",
+            "title": "custom shapes and design",
+            "caption": "Play with whatever shape or length you want"
           }
         }
       },
@@ -46,7 +41,23 @@
         "example1",
         "example2",
         "example3"
-      ]
+      ],
+      "settings": {
+        "eyebrow": "GATHER ROUND",
+        "intro": "A game-night favorite with expressive wood grain and room for personal details.",
+        "hero_image": "shopify://shop_images/KLO_Category_Cribbage_Boards_01.png",
+        "quote_link": "",
+        "quote_label": "Make it your own",
+        "gallery_eyebrow": "FROM THE WORKSHOP",
+        "gallery_heading": "Inspiration for your next piece.",
+        "gallery_intro": "Explore the possibilities of wood, detail, and personalization.",
+        "shop_eyebrow": "SHOP THIS COLLECTION",
+        "shop_heading": "Discover the collection",
+        "empty_eyebrow": "CUSTOM POSSIBILITIES",
+        "empty_heading": "Have a piece in mind?",
+        "empty_description": "We're preparing the online collection. Tell us what you'd like to create, and we'll discuss a custom piece.",
+        "empty_button": "Request a custom quote"
+      }
     }
   },
   "order": [
