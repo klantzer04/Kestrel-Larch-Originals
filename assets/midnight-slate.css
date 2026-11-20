@@ -143,3 +143,106 @@ body.design-midnight-slate{background:var(--midnight);color:var(--cream)}
   .design-midnight-slate .category-card h3{font-size:1.03rem;padding:14px 2px 0}
   .design-midnight-slate .category-card p{font-size:.75rem;padding:0 2px}
 }
+
+/* Signature Showcase — approved Featured Collection option A. */
+.design-midnight-slate .featured-band .signature-showcase{
+  padding-top:80px;
+  padding-bottom:90px;
+}
+.design-midnight-slate .signature-showcase-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+  gap:clamp(34px,5vw,76px);
+  align-items:center;
+}
+.design-midnight-slate .signature-showcase-media{
+  overflow:hidden;
+  border-radius:18px;
+  background:var(--midnight);
+  box-shadow:0 18px 32px rgba(0,0,0,.30),0 4px 10px rgba(0,0,0,.15);
+}
+.design-midnight-slate .signature-showcase-media img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.design-midnight-slate .signature-showcase-media .photo-placeholder{
+  min-height:330px;
+  aspect-ratio:16/10;
+  border:0;
+  border-radius:18px;
+}
+.design-midnight-slate .signature-showcase-copy{
+  max-width:465px;
+  padding:24px 0;
+}
+.design-midnight-slate .signature-showcase-copy .eyebrow{
+  margin:0 0 18px;
+  font-size:.69rem;
+  letter-spacing:.16em;
+  color:var(--tan);
+}
+.design-midnight-slate .signature-showcase-copy h2{
+  font:400 clamp(2rem,3.4vw,3.8rem)/1.12 Georgia,serif;
+  letter-spacing:-.035em;
+  margin:0 0 24px;
+  text-wrap:balance;
+}
+.design-midnight-slate .signature-showcase-description{
+  color:var(--cream);
+  opacity:.88;
+  line-height:1.7;
+  font-size:1rem;
+  max-width:38ch;
+  margin:0;
+}
+.design-midnight-slate .signature-showcase-link{
+  display:inline-flex;
+  align-items:center;
+  gap:18px;
+  margin-top:30px;
+  padding:0 0 8px;
+  border-bottom:2px solid var(--copper);
+  text-decoration:none;
+  font-size:.88rem;
+  font-weight:600;
+  color:var(--cream);
+}
+.design-midnight-slate .signature-showcase-link:hover,
+.design-midnight-slate .signature-showcase-link:focus-visible{
+  border-bottom-color:var(--cream);
+}
+.design-midnight-slate .signature-product-selection{
+  padding-top:48px;
+  margin-top:56px;
+  border-top:1px solid var(--slate);
+}
+.design-midnight-slate .signature-product-selection h3{
+  font:400 clamp(1.5rem,2.5vw,2.3rem)/1.25 Georgia,serif;
+  margin:0;
+}
+@media(max-width:899px){
+  .design-midnight-slate .featured-band .signature-showcase{
+    padding-top:54px;
+    padding-bottom:56px;
+  }
+  .design-midnight-slate .signature-showcase-layout{
+    grid-template-columns:1fr;
+    gap:26px;
+  }
+  .design-midnight-slate .signature-showcase-copy{
+    max-width:620px;
+    padding:0;
+  }
+  .design-midnight-slate .signature-showcase-copy h2{
+    font-size:clamp(2rem,6vw,3rem);
+    margin-bottom:17px;
+  }
+  .design-midnight-slate .signature-showcase-link{margin-top:22px}
+  .design-midnight-slate .signature-product-selection{margin-top:45px;padding-top:38px}
+}
+@media(max-width:480px){
+  .design-midnight-slate .signature-showcase-media{border-radius:16px}
+  .design-midnight-slate .signature-showcase-copy .eyebrow{margin-bottom:14px}
+}

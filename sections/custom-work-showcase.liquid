@@ -1,7 +1,7 @@
 {% assign photos = 0 %}
 {% for block in section.blocks %}{% if block.settings.image != blank %}{% assign photos = photos | plus: 1 %}{% endif %}{% endfor %}
 {% if photos > 0 or request.design_mode %}
-<section class="section container work-showcase">
+<section id="featured-work" class="section container work-showcase">
   <div class="section-heading"><div><p class="eyebrow">ORIGINAL DETAILS. EVERYDAY CONNECTIONS.</p><h2>{{ section.settings.heading | escape }}</h2></div><p class="showcase-intro">{{ section.settings.intro | escape }}</p></div>
   <div class="showcase-grid">
   {% for block in section.blocks %}
