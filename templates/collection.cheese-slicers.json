@@ -1,0 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-collection-studio",
+      "settings": {
+        "eyebrow": "THE ART OF GATHERING",
+        "intro": "Thoughtful serving pieces that balance everyday function with a little personal artistry.",
+        "hero_image": "shopify://shop_images/KLO_Category_Cheese_Slicers_01.png"
+      },
+      "blocks": {
+        "example1": {
+          "type": "inspiration",
+          "settings": {
+            "title": "Mountain landscape",
+            "caption": "A quiet nod to the outdoors.",
+            "image": "shopify://shop_images/KLO_Product_08_Mountain_Cheese_Slicer.png"
+          }
+        },
+        "example2": {
+          "type": "inspiration",
+          "settings": {
+            "title": "Elk inlay",
+            "caption": "Wildlife-inspired craftsmanship.",
+            "image": "shopify://shop_images/KLO_Product_09_Elk_Cheese_Slicer.png"
+          }
+        },
+        "example3": {
+          "type": "inspiration",
+          "settings": {
+            "title": "Trout design",
+            "caption": "A favorite river story in wood.",
+            "image": "shopify://shop_images/KLO_Product_10_Trout_Cheese_Slicer.png"
+          }
+        },
+        "example4": {
+          "type": "inspiration",
+          "settings": {
+            "title": "Personalized monogram",
+            "caption": "Made to give, and made to keep.",
+            "image": "shopify://shop_images/KLO_Product_11_Monogram_M_Cheese_Slicer.png"
+          }
+        }
+      },
+      "block_order": [
+        "example1",
+        "example2",
+        "example3",
+        "example4"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

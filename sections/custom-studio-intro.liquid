@@ -1,0 +1,31 @@
+<section class="section container studio-custom-hero">
+ <nav class="studio-breadcrumb" aria-label="Breadcrumb"><a href="{{ routes.root_url }}">Home</a><span aria-hidden="true">/</span><span aria-current="page">{{ page.title | escape }}</span></nav>
+ <div class="studio-custom-hero-layout">
+   <div class="studio-custom-hero-copy">
+     <p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>
+     <h1>{{ section.settings.heading | escape }}</h1>
+     <p class="studio-lede">{{ section.settings.intro | escape }}</p>
+     {% if page.content != blank %}<div class="richtext">{{ page.content }}</div>{% endif %}
+     <a class="button" href="#custom-quote-form">{{ section.settings.button | escape }} <span aria-hidden="true">↗</span></a>
+   </div>
+   <div class="studio-custom-hero-photo">
+     {% if section.settings.image != blank %}
+       {% assign custom_hero_alt = section.settings.image.alt | default: 'Personalized handcrafted woodwork' %}
+       {{ section.settings.image | image_url: width: 1600 | image_tag: widths: '480, 720, 1080, 1600', sizes: '(min-width: 900px) 49vw, 100vw', loading: 'eager', alt: custom_hero_alt }}
+     {% else %}{% render 'placeholder', label: 'Approved custom work photo' %}{% endif %}
+   </div>
+ </div>
+</section>
+{% schema %}
+{
+ "name":"Custom order introduction",
+ "settings":[
+  {"type":"text","id":"eyebrow","label":"Eyebrow","default":"YOUR IDEAS. OUR CRAFT."},
+  {"type":"text","id":"heading","label":"Headline","default":"Your idea, made personal."},
+  {"type":"textarea","id":"intro","label":"Introduction","default":"From a favorite game to a meaningful gift, the best pieces start with a story. Share yours and we'll explore the possibilities together."},
+  {"type":"image_picker","id":"image","label":"Approved custom work photograph"},
+  {"type":"text","id":"button","label":"Button label","default":"Start your project"}
+ ],
+ "presets":[{"name":"Custom order introduction"}]
+}
+{% endschema %}

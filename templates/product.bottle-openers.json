@@ -1,0 +1,29 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product-studio",
+      "settings": {
+        "category_collection": "bottle-openers",
+        "eyebrow": "THE EVERYDAY ORIGINAL",
+        "subtitle": "A useful little piece with a personal touch.",
+        "custom_heading": "A gift that feels personal.",
+        "custom_copy": "Want a monogram, wildlife silhouette, or wood-inlay design on the display side? Request a custom quote for your artwork.",
+        "materials_note": "Designs vary by wood species and approved metal hardware. The opener and any magnets are located on the hardware side as shown in the final product listing.",
+        "care_note": "Wipe the wooden surface with a soft cloth and dry after exposure to moisture. Avoid submerging the hardware or wood.",
+        "allow_personalization": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

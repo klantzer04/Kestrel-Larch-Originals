@@ -246,3 +246,167 @@ body.design-midnight-slate{background:var(--midnight);color:var(--cream)}
   .design-midnight-slate .signature-showcase-media{border-radius:16px}
   .design-midnight-slate .signature-showcase-copy .eyebrow{margin-bottom:14px}
 }
+
+/* Floating Studio interior pages — derived from approved Midnight Slate / Floating Gallery. */
+.design-midnight-slate .studio-breadcrumb{display:flex;align-items:center;gap:12px;font-size:.78rem;color:var(--cream);opacity:.78;margin-bottom:32px}
+.design-midnight-slate .studio-breadcrumb a{text-underline-offset:4px}
+.design-midnight-slate .studio-collection{padding-top:42px;padding-bottom:88px}
+.design-midnight-slate .studio-collection-hero,
+.design-midnight-slate .studio-custom-hero-layout{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);align-items:center;gap:clamp(32px,5.5vw,88px)}
+.design-midnight-slate .studio-collection-intro,.design-midnight-slate .studio-custom-hero-copy{padding:16px 0;max-width:600px}
+.design-midnight-slate .studio-collection .eyebrow,.design-midnight-slate .studio-custom-hero .eyebrow,.design-midnight-slate .studio-custom-gallery .eyebrow,
+.design-midnight-slate .studio-process .eyebrow,.design-midnight-slate .studio-quote-section .eyebrow{color:var(--tan);letter-spacing:.18em;margin-bottom:18px}
+.design-midnight-slate .studio-collection h1,.design-midnight-slate .studio-custom-hero h1{font:400 clamp(2.7rem,5.3vw,5.5rem)/1.04 Georgia,serif;letter-spacing:-.045em;margin-bottom:22px;text-wrap:balance}
+.design-midnight-slate .studio-lede{max-width:45ch;font-size:clamp(1rem,1.4vw,1.13rem);line-height:1.7;color:var(--cream);opacity:.91;margin-bottom:22px}
+.design-midnight-slate .studio-description{max-width:53ch;font-size:.94rem;margin-bottom:22px;opacity:.82}
+.design-midnight-slate .studio-description p{margin-bottom:10px}
+.design-midnight-slate .studio-text-link{display:inline-flex;gap:18px;text-decoration:none;border-bottom:2px solid var(--copper);padding-bottom:7px;margin-top:5px;font-size:.88rem;font-weight:600}
+.design-midnight-slate .studio-text-link:hover{border-bottom-color:var(--cream)}
+.design-midnight-slate .studio-collection-photo,.design-midnight-slate .studio-custom-hero-photo{overflow:hidden;border-radius:20px;background:var(--midnight);box-shadow:0 18px 34px rgba(0,0,0,.34),0 4px 10px rgba(0,0,0,.18)}
+.design-midnight-slate .studio-collection-photo img,.design-midnight-slate .studio-custom-hero-photo img{display:block;width:100%;height:auto;object-fit:contain}
+.design-midnight-slate .studio-inspiration{margin-top:100px}
+.design-midnight-slate .studio-section-header{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:30px}
+.design-midnight-slate .studio-section-header h2,.design-midnight-slate .studio-process h2,.design-midnight-slate .studio-quote-heading h2,
+.design-midnight-slate .studio-empty-note h2{font:400 clamp(2rem,3.25vw,3.45rem)/1.13 Georgia,serif;letter-spacing:-.035em;margin:0;text-wrap:balance}
+.design-midnight-slate .studio-section-header >p{max-width:320px;line-height:1.6;margin:0;font-size:.9rem;opacity:.82}
+.design-midnight-slate .studio-inspiration-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 24px}
+.design-midnight-slate .studio-inspiration-image{border-radius:18px;background:var(--midnight);overflow:hidden;box-shadow:0 11px 23px rgba(0,0,0,.22)}
+.design-midnight-slate .studio-inspiration-image img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain}
+.design-midnight-slate .studio-inspiration-piece h3{font:400 clamp(1.1rem,1.7vw,1.45rem)/1.26 Georgia,serif;margin:17px 0 6px}
+.design-midnight-slate .studio-inspiration-piece p{font-size:.87rem;line-height:1.55;color:var(--cream);opacity:.8;margin:0}
+.design-midnight-slate .studio-collection-shop{margin-top:80px}
+.design-midnight-slate .studio-collection-shop .product-grid{margin-top:30px}
+.design-midnight-slate .studio-empty-note{background:var(--slate);border-radius:20px;padding:clamp(30px,5vw,70px);max-width:100%;box-shadow:0 12px 28px rgba(0,0,0,.14)}
+.design-midnight-slate .studio-empty-note h2{margin-bottom:17px}
+.design-midnight-slate .studio-empty-note p:not(.eyebrow){font-size:1rem;line-height:1.65;max-width:56ch;margin-bottom:25px}
+.design-midnight-slate .studio-empty-note .button{width:max-content;max-width:100%}
+.design-midnight-slate .studio-custom-hero{padding-top:42px;padding-bottom:55px}
+.design-midnight-slate .studio-custom-hero .button{margin-top:12px}
+.design-midnight-slate .studio-custom-gallery{padding-top:46px;padding-bottom:88px}
+.design-midnight-slate .studio-process-band{background:var(--slate)}
+.design-midnight-slate .studio-process{padding-top:80px;padding-bottom:85px}
+.design-midnight-slate .studio-process-header{max-width:670px;margin-bottom:38px}
+.design-midnight-slate .studio-process-header h2{margin-bottom:15px}
+.design-midnight-slate .studio-process-header >p:last-child{max-width:54ch;line-height:1.6}
+.design-midnight-slate .studio-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.design-midnight-slate .studio-step{padding-top:19px;border-top:1px solid var(--cream)}
+.design-midnight-slate .studio-step-number{display:block;font:400 1rem Georgia,serif;color:var(--tan);margin-bottom:25px}
+.design-midnight-slate .studio-step h3{font:400 clamp(1.25rem,2vw,1.8rem)/1.18 Georgia,serif;margin-bottom:12px}
+.design-midnight-slate .studio-step p{line-height:1.65;max-width:33ch;font-size:.92rem;color:var(--cream);margin:0}
+.design-midnight-slate .studio-quote-section{padding-top:95px;padding-bottom:105px;scroll-margin-top:20px}
+.design-midnight-slate .studio-quote-heading{max-width:700px;margin:0 0 34px}
+.design-midnight-slate .studio-quote-heading h2{margin-bottom:18px}
+.design-midnight-slate .studio-quote-heading >p:last-child{max-width:58ch;line-height:1.6;font-size:.98rem}
+.design-midnight-slate .studio-quote-card{background:var(--slate);border-radius:22px;padding:clamp(24px,4vw,56px)}
+.design-midnight-slate .studio-quote-form fieldset{border:0;padding:0;margin:0 0 34px;min-width:0}
+.design-midnight-slate .studio-quote-form legend{font:400 clamp(1.25rem,2vw,1.65rem)/1.2 Georgia,serif;margin-bottom:20px}
+.design-midnight-slate .studio-form-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 22px}
+.design-midnight-slate .studio-quote-form label{color:var(--cream);font-size:.84rem;font-weight:600;margin:0 0 9px}
+.design-midnight-slate .studio-quote-form input,.design-midnight-slate .studio-quote-form select,.design-midnight-slate .studio-quote-form textarea{
+  width:100%;min-height:49px;background:var(--midnight);color:var(--cream);border:1px solid #a8bdc7;border-radius:9px;padding:12px 14px;margin:0 0 21px}
+.design-midnight-slate .studio-quote-form textarea{min-height:135px}
+.design-midnight-slate .studio-quote-form input::placeholder,.design-midnight-slate .studio-quote-form textarea::placeholder{color:#d8e0e4;opacity:.68}
+.design-midnight-slate .studio-quote-form select option{color:var(--cream);background:var(--midnight)}
+.design-midnight-slate .studio-reference-note{padding:17px 20px;border-left:3px solid var(--tan);background:rgba(25,40,50,.56);border-radius:0 9px 9px 0;font-size:.85rem;line-height:1.7;margin:2px 0 22px}
+.design-midnight-slate .studio-form-legal{font-size:.82rem;line-height:1.65;color:var(--cream);opacity:.86;max-width:66ch;margin-bottom:15px}
+.design-midnight-slate .studio-quote-form button{margin-top:6px}
+.design-midnight-slate .studio-form-success{border-left:3px solid var(--tan);padding:12px 25px}
+.design-midnight-slate .studio-form-success h3{font:400 2rem Georgia,serif;margin:0 0 8px}
+.design-midnight-slate .studio-form-errors{padding:12px 18px;border-left:3px solid var(--copper);margin-bottom:20px}
+@media(max-width:1100px){
+ .design-midnight-slate .studio-inspiration-grid{gap:26px 18px}
+}
+@media(max-width:899px){
+ .design-midnight-slate .studio-collection,.design-midnight-slate .studio-custom-hero{padding-top:30px}
+ .design-midnight-slate .studio-collection-hero,.design-midnight-slate .studio-custom-hero-layout{grid-template-columns:1fr;gap:26px}
+ .design-midnight-slate .studio-collection-intro,.design-midnight-slate .studio-custom-hero-copy{padding:0}
+ .design-midnight-slate .studio-collection h1,.design-midnight-slate .studio-custom-hero h1{font-size:clamp(2.6rem,7vw,4rem)}
+ .design-midnight-slate .studio-inspiration{margin-top:66px}
+ .design-midnight-slate .studio-section-header{flex-direction:column;align-items:flex-start;gap:12px}
+ .design-midnight-slate .studio-inspiration-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .design-midnight-slate .studio-process{padding-top:60px;padding-bottom:60px}
+ .design-midnight-slate .studio-steps{gap:18px}
+ .design-midnight-slate .studio-custom-gallery{padding-bottom:60px}
+ .design-midnight-slate .studio-quote-section{padding-top:65px;padding-bottom:75px}
+}
+@media(max-width:600px){
+ .design-midnight-slate .studio-breadcrumb{margin-bottom:20px}
+ .design-midnight-slate .studio-collection h1,.design-midnight-slate .studio-custom-hero h1{font-size:clamp(2.3rem,11vw,3.25rem)}
+ .design-midnight-slate .studio-collection-photo,.design-midnight-slate .studio-custom-hero-photo{border-radius:16px}
+ .design-midnight-slate .studio-inspiration-grid{grid-template-columns:1fr;gap:28px}
+ .design-midnight-slate .studio-inspiration-image{border-radius:16px}
+ .design-midnight-slate .studio-collection-shop{margin-top:55px}
+ .design-midnight-slate .studio-empty-note{border-radius:16px}
+ .design-midnight-slate .studio-steps{grid-template-columns:1fr;gap:28px}
+ .design-midnight-slate .studio-step-number{margin-bottom:15px}
+ .design-midnight-slate .studio-form-row{grid-template-columns:1fr;gap:0}
+ .design-midnight-slate .studio-quote-card{border-radius:16px}
+}
+
+.design-midnight-slate .studio-completed-projects{padding-top:42px;padding-bottom:88px}
+.design-midnight-slate .studio-completed-heading{max-width:750px;margin:0 0 48px}
+.design-midnight-slate .studio-completed-heading .eyebrow{color:var(--tan)}
+.design-midnight-slate .studio-completed-heading h1{font:400 clamp(2.7rem,5vw,5rem)/1.08 Georgia,serif;letter-spacing:-.035em;margin-bottom:20px}
+.design-midnight-slate .studio-completed-heading >p:not(.eyebrow){max-width:55ch;font-size:1.04rem;line-height:1.6}
+.design-midnight-slate .studio-completed-heading .richtext{max-width:58ch;color:var(--cream);opacity:.8}
+.design-midnight-slate .studio-gallery-cta{background:var(--slate);margin-top:70px;padding:clamp(26px,4vw,52px);border-radius:19px}
+.design-midnight-slate .studio-gallery-cta p{font:400 clamp(1.35rem,2.3vw,2rem)/1.2 Georgia,serif;margin:0 0 22px}
+
+
+/* Floating Studio product detail pages */
+.design-midnight-slate .studio-product{padding-top:38px;padding-bottom:105px}
+.design-midnight-slate .studio-product-layout{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(34px,5.5vw,86px);align-items:start}
+.design-midnight-slate .studio-product-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.design-midnight-slate .studio-product-media{min-width:0;overflow:hidden;border-radius:17px;background:var(--midnight);box-shadow:0 13px 28px rgba(0,0,0,.27)}
+.design-midnight-slate .studio-product-media.is-primary{grid-column:1/-1;border-radius:21px}
+.design-midnight-slate .studio-product-media img,.design-midnight-slate .studio-product-media video,.design-midnight-slate .studio-product-media iframe,.design-midnight-slate .studio-product-media model-viewer{display:block;width:100%;height:auto;object-fit:contain}
+.design-midnight-slate .studio-product-media .photo-placeholder{border:0;min-height:400px;aspect-ratio:4/3}
+.design-midnight-slate .studio-product-info{padding:5px 0 0}
+.design-midnight-slate .studio-product-info > .eyebrow,.design-midnight-slate .studio-product-custom > .eyebrow,.design-midnight-slate .studio-product .studio-section-header .eyebrow,.design-midnight-slate .studio-price-pending > .eyebrow{color:var(--tan);margin-bottom:17px;letter-spacing:.16em}
+.design-midnight-slate .studio-product-info h1{font:400 clamp(2.3rem,4vw,4.35rem)/1.07 Georgia,serif;letter-spacing:-.037em;text-wrap:balance;margin:0 0 18px}
+.design-midnight-slate .studio-product-subtitle{font-size:1.08rem;line-height:1.6;max-width:40ch;color:var(--cream);opacity:.9;margin:0 0 19px}
+.design-midnight-slate .studio-product-description{font-size:.95rem;line-height:1.7;color:var(--cream);max-width:56ch;margin:18px 0 27px}
+.design-midnight-slate .studio-product-description p{margin-bottom:12px}
+.design-midnight-slate .studio-product-price{font:400 clamp(1.65rem,2.5vw,2.25rem)/1.2 Georgia,serif;margin:0 0 26px;color:var(--cream)}
+.design-midnight-slate .studio-product-form label{display:block;margin:18px 0 8px;font-size:.84rem;font-weight:600;color:var(--cream)}
+.design-midnight-slate .studio-product-form select,.design-midnight-slate .studio-product-form input{background:var(--midnight);color:var(--cream);border:1px solid #9fb3c0;border-radius:10px;padding:12px 14px;min-height:49px;width:100%;margin:0}
+.design-midnight-slate .studio-product-form select option{background:var(--midnight);color:var(--cream)}
+.design-midnight-slate .studio-product-form input::placeholder{color:var(--cream);opacity:.55}
+.design-midnight-slate .studio-field-hint{font-size:.81rem;line-height:1.6;color:var(--cream);opacity:.76;margin:10px 0 16px}
+.design-midnight-slate .studio-purchase-row{display:flex;gap:18px;align-items:end;margin-top:22px}
+.design-midnight-slate .studio-quantity{width:100px;flex:0 0 100px}
+.design-midnight-slate .studio-quantity input{width:100px;text-align:center}
+.design-midnight-slate .studio-add-button{min-height:49px;flex:1;margin:0!important}
+.design-midnight-slate .studio-price-pending{border-left:3px solid var(--tan);padding:17px 21px;background:var(--slate);border-radius:0 12px 12px 0;margin:28px 0}
+.design-midnight-slate .studio-price-pending >.eyebrow{margin-bottom:9px}
+.design-midnight-slate .studio-price-pending p:last-child{font-size:.9rem;line-height:1.65;margin:0}
+.design-midnight-slate .studio-product-custom{margin-top:37px;padding:29px;border-radius:18px;background:var(--slate)}
+.design-midnight-slate .studio-product-custom >.eyebrow{margin:0 0 12px}
+.design-midnight-slate .studio-product-custom h2{font:400 clamp(1.6rem,2.6vw,2.3rem)/1.16 Georgia,serif;letter-spacing:-.03em;margin:0 0 12px}
+.design-midnight-slate .studio-product-custom p:not(.eyebrow){font-size:.9rem;line-height:1.7;margin:0 0 13px}
+.design-midnight-slate .studio-product-custom .studio-text-link{font-size:.85rem}
+.design-midnight-slate .studio-product-information{margin-top:30px}
+.design-midnight-slate .studio-product-information details{border-bottom:1px solid var(--slate);padding:17px 0}
+.design-midnight-slate .studio-product-information details:first-child{border-top:1px solid var(--slate)}
+.design-midnight-slate .studio-product-information summary{font-size:.93rem;cursor:pointer;font-weight:600}
+.design-midnight-slate .studio-product-information details p{color:var(--cream);opacity:.84;font-size:.88rem;line-height:1.7;margin:13px 0 3px}
+.design-midnight-slate .studio-related-products{margin-top:92px}
+.design-midnight-slate .studio-related-products .studio-section-header h2{font:400 clamp(1.8rem,3.2vw,3rem)/1.16 Georgia,serif;margin:0}
+.design-midnight-slate .studio-related-products .product-grid{margin-top:33px}
+@media(max-width:899px){
+ .design-midnight-slate .studio-product{padding-top:30px;padding-bottom:75px}
+ .design-midnight-slate .studio-product-layout{grid-template-columns:1fr;gap:36px}
+ .design-midnight-slate .studio-product-info h1{font-size:clamp(2.3rem,6.5vw,3.65rem)}
+ .design-midnight-slate .studio-related-products{margin-top:67px}
+}
+@media(max-width:599px){
+ .design-midnight-slate .studio-product-gallery{gap:11px}
+ .design-midnight-slate .studio-product-media{border-radius:12px}
+ .design-midnight-slate .studio-product-media.is-primary{border-radius:16px}
+ .design-midnight-slate .studio-product-info h1{font-size:clamp(2.2rem,10.4vw,3.1rem)}
+ .design-midnight-slate .studio-product-custom{padding:23px;border-radius:16px}
+ .design-midnight-slate .studio-purchase-row{gap:11px}
+ .design-midnight-slate .studio-quantity{flex-basis:83px;width:83px}
+ .design-midnight-slate .studio-quantity input{width:83px}
+}
+

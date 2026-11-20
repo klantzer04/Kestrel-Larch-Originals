@@ -1,0 +1,29 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product-studio",
+      "settings": {
+        "category_collection": "cribbage-boards",
+        "eyebrow": "MADE FOR GAME NIGHT",
+        "subtitle": "Distinctive boards for the games and people you love.",
+        "custom_heading": "Your game, your details.",
+        "custom_copy": "Looking for initials, a meaningful emblem, different wood species or a unique game-board layout? Send us your vision for a custom quote.",
+        "materials_note": "Wood species, track format, and included accessories depend on the exact listing. Check the item description for the confirmed configuration.",
+        "care_note": "Wipe with a soft, dry cloth. Avoid prolonged moisture and handle pegs and small accessories carefully.",
+        "allow_personalization": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

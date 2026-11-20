@@ -1,0 +1,96 @@
+<section class="studio-collection section container">
+  <nav class="studio-breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ routes.root_url }}">Home</a><span aria-hidden="true">/</span>
+    <span aria-current="page">{{ collection.title | escape }}</span>
+  </nav>
+  <div class="studio-collection-hero">
+    <div class="studio-collection-intro">
+      <p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      <h1>{{ collection.title | escape }}</h1>
+      {% if section.settings.intro != blank %}<p class="studio-lede">{{ section.settings.intro | escape }}</p>{% endif %}
+      {% if collection.description != blank %}<div class="studio-description">{{ collection.description }}</div>{% endif %}
+      <a class="studio-text-link" href="{{ section.settings.quote_link | default: '/pages/custom-order#custom-quote-form' }}">{{ section.settings.quote_label | escape }} <span aria-hidden="true">↗</span></a>
+    </div>
+    {% assign studio_hero = section.settings.hero_image | default: collection.image %}
+    <div class="studio-collection-photo">
+      {% if studio_hero != blank %}
+        {% assign studio_hero_alt = studio_hero.alt | default: collection.title %}
+        {{ studio_hero | image_url: width: 1800 | image_tag: widths: '520, 760, 1100, 1500, 1800', sizes: '(min-width: 900px) 51vw, 100vw', loading: 'eager', alt: studio_hero_alt }}
+      {% else %}{% render 'placeholder', label: collection.title %}{% endif %}
+    </div>
+  </div>
+  {% if section.blocks.size > 0 %}
+    <div class="studio-inspiration">
+      <div class="studio-section-header">
+        <div>
+          <p class="eyebrow">{{ section.settings.gallery_eyebrow | escape }}</p>
+          <h2>{{ section.settings.gallery_heading | escape }}</h2>
+        </div>
+        <p>{{ section.settings.gallery_intro | escape }}</p>
+      </div>
+      <div class="studio-inspiration-grid">
+        {% for block in section.blocks %}
+          <article class="studio-inspiration-piece" {{ block.shopify_attributes }}>
+            <div class="studio-inspiration-image">
+              {% if block.settings.image != blank %}
+                {% assign studio_alt = block.settings.image.alt | default: block.settings.title %}
+                {{ block.settings.image | image_url: width: 1100 | image_tag: widths: '320, 480, 720, 900, 1100', sizes: '(min-width: 1100px) 26vw, (min-width: 600px) 46vw, 95vw', loading: 'lazy', alt: studio_alt }}
+              {% else %}{% render 'placeholder', label: block.settings.title %}{% endif %}
+            </div>
+            <h3>{{ block.settings.title | escape }}</h3>
+            {% if block.settings.caption != blank %}<p>{{ block.settings.caption | escape }}</p>{% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+  <div class="studio-collection-shop" id="shop-products">
+    {% if collection.products_count > 0 %}
+      <div class="studio-section-header">
+        <div><p class="eyebrow">{{ section.settings.shop_eyebrow | escape }}</p><h2>{{ section.settings.shop_heading | escape }}</h2></div>
+      </div>
+      {% paginate collection.products by 24 %}
+        <div class="product-grid">
+          {% for product in collection.products %}
+            {% render 'product-card', product: product %}
+          {% endfor %}
+        </div>
+        {{ paginate | default_pagination }}
+      {% endpaginate %}
+    {% else %}
+      <div class="studio-empty-note">
+        <p class="eyebrow">{{ section.settings.empty_eyebrow | escape }}</p>
+        <h2>{{ section.settings.empty_heading | escape }}</h2>
+        <p>{{ section.settings.empty_description | escape }}</p>
+        <a class="button" href="{{ section.settings.quote_link | default: '/pages/custom-order#custom-quote-form' }}">{{ section.settings.empty_button | escape }} <span aria-hidden="true">↗</span></a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+{% schema %}
+{
+ "name":"Floating Studio",
+ "settings":[
+  {"type":"text","id":"eyebrow","label":"Hero eyebrow","default":"HANDCRAFTED ORIGINALS"},
+  {"type":"textarea","id":"intro","label":"Hero introduction","default":"Original woodworking, made personal."},
+  {"type":"image_picker","id":"hero_image","label":"Approved hero photograph"},
+  {"type":"url","id":"quote_link","label":"Custom inquiry link"},
+  {"type":"text","id":"quote_label","label":"Hero inquiry link text","default":"Make it your own"},
+  {"type":"text","id":"gallery_eyebrow","label":"Gallery eyebrow","default":"FROM THE WORKSHOP"},
+  {"type":"text","id":"gallery_heading","label":"Gallery heading","default":"Inspiration for your next piece."},
+  {"type":"textarea","id":"gallery_intro","label":"Gallery introduction","default":"Explore the possibilities of wood, detail, and personalization."},
+  {"type":"text","id":"shop_eyebrow","label":"Shop eyebrow","default":"SHOP THIS COLLECTION"},
+  {"type":"text","id":"shop_heading","label":"Product section heading","default":"Discover the collection"},
+  {"type":"text","id":"empty_eyebrow","label":"Empty catalog eyebrow","default":"CUSTOM POSSIBILITIES"},
+  {"type":"text","id":"empty_heading","label":"Empty catalog headline","default":"Have a piece in mind?"},
+  {"type":"textarea","id":"empty_description","label":"Empty catalog description","default":"We're preparing the online collection. Tell us what you'd like to create, and we'll discuss a custom piece."},
+  {"type":"text","id":"empty_button","label":"Empty catalog button","default":"Request a custom quote"}
+ ],
+ "blocks":[{"type":"inspiration","name":"Inspiration photograph","settings":[
+  {"type":"image_picker","id":"image","label":"Approved product photo"},
+  {"type":"text","id":"title","label":"Design title"},
+  {"type":"textarea","id":"caption","label":"Short description"}]}],
+ "max_blocks":12,
+ "presets":[{"name":"Floating Studio"}]
+}
+{% endschema %}

@@ -1,10 +1,105 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "main": {
-      "type": "custom-request"
+    "intro": {
+      "type": "custom-studio-intro",
+      "settings": {
+        "image": "shopify://shop_images/KLO_Product_16_Homepage_Collection_Approved.png"
+      }
+    },
+    "gallery": {
+      "type": "custom-studio-gallery",
+      "blocks": {
+        "idea1": {
+          "type": "idea",
+          "settings": {
+            "image": "shopify://shop_images/KLO_Product_01_Personalized_End_Grain_Board.png",
+            "title": "Personalized cutting boards",
+            "caption": "Details that make a kitchen essential your own."
+          }
+        },
+        "idea2": {
+          "type": "idea",
+          "settings": {
+            "image": "shopify://shop_images/KLO_Product_05_Personalized_Walnut_Cribbage_Board.png",
+            "title": "Custom cribbage boards",
+            "caption": "A more personal game-night tradition."
+          }
+        },
+        "idea3": {
+          "type": "idea",
+          "settings": {
+            "image": "shopify://shop_images/KLO_Product_08_Mountain_Cheese_Slicer.png",
+            "title": "Cheese slicers",
+            "caption": "A useful piece with a meaningful design."
+          }
+        },
+        "idea4": {
+          "type": "idea",
+          "settings": {
+            "image": "shopify://shop_images/KLO_Product_12_Coaster_Set.png",
+            "title": "Coasters",
+            "caption": "Little details with lasting character."
+          }
+        }
+      },
+      "block_order": [
+        "idea1",
+        "idea2",
+        "idea3",
+        "idea4"
+      ],
+      "settings": {}
+    },
+    "process": {
+      "type": "custom-studio-process",
+      "blocks": {
+        "step1": {
+          "type": "step",
+          "settings": {
+            "title": "Tell us your idea",
+            "text": "Describe the piece, the material you like, and any personal details you have in mind."
+          }
+        },
+        "step2": {
+          "type": "step",
+          "settings": {
+            "title": "Discuss the details",
+            "text": "We'll talk through design possibilities, scope and pricing before any order is confirmed."
+          }
+        },
+        "step3": {
+          "type": "step",
+          "settings": {
+            "title": "Make it yours",
+            "text": "Once the details are agreed, your custom project can move toward production."
+          }
+        }
+      },
+      "block_order": [
+        "step1",
+        "step2",
+        "step3"
+      ],
+      "settings": {}
+    },
+    "quote": {
+      "type": "custom-request",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "intro",
+    "gallery",
+    "process",
+    "quote"
   ]
 }

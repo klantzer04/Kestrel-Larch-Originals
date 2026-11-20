@@ -24,7 +24,8 @@
           "settings": {
             "title": "Cribbage boards",
             "caption": "A little friendly competition.",
-            "image": "shopify://shop_images/KLO_Category_Cribbage_Boards_01.png"
+            "image": "shopify://shop_images/KLO_Category_Cribbage_Boards_01.png",
+            "link": "/collections/cribbage-boards"
           }
         },
         "1": {
@@ -32,7 +33,8 @@
           "settings": {
             "title": "Cutting boards",
             "caption": "At the heart of the kitchen.",
-            "image": "shopify://shop_images/KLO_Category_Cutting_Boards_01.png"
+            "image": "shopify://shop_images/KLO_Category_Cutting_Boards_01.png",
+            "link": "/collections/cutting-boards"
           }
         },
         "2": {
@@ -40,7 +42,8 @@
           "settings": {
             "title": "Cheese slicers",
             "caption": "Something worth sharing.",
-            "image": "shopify://shop_images/KLO_Category_Cheese_Slicers_01.png"
+            "image": "shopify://shop_images/KLO_Category_Cheese_Slicers_01.png",
+            "link": "/collections/cheese-slicers"
           }
         },
         "3": {
@@ -48,7 +51,8 @@
           "settings": {
             "title": "Coasters",
             "caption": "A place for your pause.",
-            "image": "shopify://shop_images/KLO_Category_Coasters_01.png"
+            "image": "shopify://shop_images/KLO_Category_Coasters_01.png",
+            "link": "/collections/coasters"
           }
         },
         "4": {
@@ -56,7 +60,8 @@
           "settings": {
             "title": "Custom projects",
             "caption": "An idea made personal.",
-            "image": "shopify://shop_images/KLO_Product_16_Homepage_Collection_Approved.png"
+            "image": "shopify://shop_images/KLO_Product_16_Homepage_Collection_Approved.png",
+            "link": "/pages/custom-order"
           }
         },
         "5": {
@@ -64,7 +69,8 @@
           "settings": {
             "title": "Bottle openers",
             "caption": "Small details. Lasting character.",
-            "image": "shopify://shop_images/KLO_Category_Bottle_Openers_01.png"
+            "image": "shopify://shop_images/KLO_Category_Bottle_Openers_01.png",
+            "link": "/collections/bottle-openers"
           }
         },
         "6": {
@@ -72,7 +78,8 @@
           "settings": {
             "title": "Game boards",
             "caption": "For the moments around the table.",
-            "image": "shopify://shop_images/KLO_Category_Game_Boards_01_Approved.png"
+            "image": "shopify://shop_images/KLO_Category_Game_Boards_01_Approved.png",
+            "link": "/collections/game-boards"
           }
         }
       },

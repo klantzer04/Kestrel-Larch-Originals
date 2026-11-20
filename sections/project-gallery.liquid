@@ -1,35 +1,47 @@
-<section class="section container"><p class="eyebrow">THE WORK, UP CLOSE</p><h1>{{ page.title | default: 'Completed projects' | escape }}</h1><div class="richtext">{{ page.content }}</div><div class="product-grid">{% for block in section.blocks %}<figure {{ block.shopify_attributes }}>{% if block.settings.image %}{{ block.settings.image | image_url: width: 1200 | image_tag: widths: '400, 800, 1200', loading: 'lazy' }}{% else %}{% render 'placeholder', label: 'Project photography placeholder' %}{% endif %}<figcaption><h3>{{ block.settings.title | escape }}</h3><p>{{ block.settings.description | escape }}</p></figcaption></figure>{% else %}{% for i in (1..3) %}{% render 'placeholder', label: 'Completed project — add your own photography' %}{% endfor %}{% endfor %}</div></section>
+<section class="section container studio-completed-projects">
+  <nav class="studio-breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ routes.root_url }}">Home</a><span aria-hidden="true">/</span>
+    <span aria-current="page">{{ page.title | escape }}</span>
+  </nav>
+  <div class="studio-completed-heading">
+    <p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>
+    <h1>{{ page.title | escape }}</h1>
+    <p>{{ section.settings.intro | escape }}</p>
+    {% if page.content != blank %}<div class="richtext">{{ page.content }}</div>{% endif %}
+  </div>
+  <div class="studio-inspiration-grid">
+    {% for block in section.blocks %}
+      <figure class="studio-inspiration-piece" {{ block.shopify_attributes }}>
+        <div class="studio-inspiration-image">
+          {% if block.settings.image != blank %}
+            {% assign gallery_alt = block.settings.image.alt | default: block.settings.title %}
+            {{ block.settings.image | image_url: width: 1200 | image_tag: widths: '340, 560, 800, 1200', sizes: '(min-width: 1100px) 29vw, (min-width: 600px) 46vw, 95vw', loading: 'lazy', alt: gallery_alt }}
+          {% else %}{% render 'placeholder', label: block.settings.title %}{% endif %}
+        </div>
+        <figcaption><h3>{{ block.settings.title | escape }}</h3><p>{{ block.settings.description | escape }}</p></figcaption>
+      </figure>
+    {% endfor %}
+  </div>
+  <div class="studio-gallery-cta">
+    <p>{{ section.settings.cta_copy | escape }}</p>
+    <a class="button" href="{{ section.settings.cta_link | default: '/pages/custom-order#custom-quote-form' }}">{{ section.settings.cta_text | escape }}</a>
+  </div>
+</section>
 {% schema %}
 {
-  "name": "Project gallery",
-  "settings": [],
-  "blocks": [
-    {
-      "type": "project",
-      "name": "Project",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Project photography"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Title"
-        },
-        {
-          "type": "textarea",
-          "id": "description",
-          "label": "Description"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Project gallery"
-    }
-  ]
+ "name":"Completed project gallery",
+ "settings":[
+  {"type":"text","id":"eyebrow","label":"Eyebrow","default":"THE WORK, UP CLOSE"},
+  {"type":"textarea","id":"intro","label":"Introduction","default":"An inspiration gallery of custom woodwork and the details that make every piece personal."},
+  {"type":"textarea","id":"cta_copy","label":"Custom work invitation","default":"Inspired by a design? Let's discuss a piece made for you."},
+  {"type":"text","id":"cta_text","label":"CTA button","default":"Start a custom project"},
+  {"type":"url","id":"cta_link","label":"CTA destination"}
+ ],
+ "blocks":[{"type":"project","name":"Project","settings":[
+  {"type":"image_picker","id":"image","label":"Project photography"},
+  {"type":"text","id":"title","label":"Title"},
+  {"type":"textarea","id":"description","label":"Description"}
+ ]}],
+ "presets":[{"name":"Completed project gallery"}]
 }
 {% endschema %}

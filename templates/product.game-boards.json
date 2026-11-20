@@ -1,0 +1,29 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product-studio",
+      "settings": {
+        "category_collection": "game-boards",
+        "eyebrow": "CRAFTED TO BRING PEOPLE TOGETHER",
+        "subtitle": "Personal game pieces made for gathering.",
+        "custom_heading": "Build a tradition of your own.",
+        "custom_copy": "For custom game layouts, wood combinations or personalized artwork, share your project requirements and request a quote.",
+        "materials_note": "Specific dimensions, game layout, wood choices and accessories are confirmed for each listed board.",
+        "care_note": "Use a soft, dry cloth for cleaning. Keep game pieces and board surfaces away from standing water.",
+        "allow_personalization": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

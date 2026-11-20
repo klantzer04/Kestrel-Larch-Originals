@@ -1,0 +1,46 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-collection-studio",
+      "settings": {
+        "eyebrow": "MADE FOR THE TABLE",
+        "intro": "Designed for the people who gather, play, and make memories together.",
+        "hero_image": "shopify://shop_images/KLO_Category_Game_Boards_01_Approved.png"
+      },
+      "blocks": {
+        "example1": {
+          "type": "inspiration",
+          "settings": {
+            "title": "Round board inspiration",
+            "caption": "A timeless shape for meaningful game nights.",
+            "image": "shopify://shop_images/KLO_Product_07_Round_Walnut_Cribbage_Board.png"
+          }
+        },
+        "example2": {
+          "type": "inspiration",
+          "settings": {
+            "title": "Contrasting woodwork",
+            "caption": "Custom designs with natural character.",
+            "image": "shopify://shop_images/KLO_Product_06_Two_Tone_Cribbage_Board.png"
+          }
+        }
+      },
+      "block_order": [
+        "example1",
+        "example2"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

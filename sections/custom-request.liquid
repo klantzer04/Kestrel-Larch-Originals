@@ -1,7 +1,80 @@
-<section class="section container narrow"><p class="eyebrow">LET’S MAKE SOMETHING PERSONAL</p><h1>{{ page.title | default: 'A piece of your own.' | escape }}</h1><div class="richtext">{{ page.content }}</div><p>Tell us what you have in mind. This is an inquiry, not an order or a confirmed quote.</p>{% form 'contact' %}{% if form.posted_successfully? %}<p role="status">Your inquiry was sent. Thank you for sharing your idea.</p>{% else %}{{ form.errors | default_errors }}<input type="hidden" name="contact[subject]" value="Custom project inquiry"><label for="Quote-name">Name</label><input id="Quote-name" type="text" name="contact[name]" required><label for="Quote-email">Email</label><input id="Quote-email" type="email" name="contact[email]" required><label for="Quote-phone">Phone (optional)</label><input id="Quote-phone" type="tel" name="contact[phone]" ><label for="Quote-dimensions">Dimensions and units</label><input id="Quote-dimensions" type="text" name="contact[dimensions]" ><label for="Quote-wood">Wood preferences</label><input id="Quote-wood" type="text" name="contact[wood]" ><label for="Quote-engraving">Engraving or personalization</label><input id="Quote-engraving" type="text" name="contact[engraving]" ><label for="Quote-budget">Budget range and currency</label><input id="Quote-budget" type="text" name="contact[budget]" ><label for="Quote-timeline">Ideal timeline</label><input id="Quote-timeline" type="text" name="contact[timeline]" ><label for="Quote-type">Project type</label><select id="Quote-type" name="contact[Project type]" required><option value="">Choose a project</option><option>Cribbage board</option><option>Cutting board</option><option>Cheese slicer</option><option>Coasters</option><option>Other custom project</option></select><label for="Quote-description">Project description</label><textarea id="Quote-description" name="contact[body]" rows="7" required></textarea><div class="notice"><strong>Reference images</strong><p>Secure image uploads are not configured. Please describe your references here; we can arrange a secure way to share images after your inquiry. Do not send sensitive information.</p></div><p class="muted">Sent using Shopify’s contact form. Delivery requires a valid store contact email; this theme does not provide a quote database or file storage.</p><button class="button" type="submit">Send project inquiry</button>{% endif %}{% endform %}</section>
+<section class="section container studio-quote-section" id="custom-quote-form">
+ <div class="studio-quote-heading">
+  <p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>
+  <h2>{{ section.settings.heading | escape }}</h2>
+  <p>{{ section.settings.intro | escape }}</p>
+ </div>
+ <div class="studio-quote-card">
+  {% form 'contact', id: 'KLOCustomRequestForm', class: 'studio-quote-form' %}
+   {% if form.posted_successfully? %}
+    <div class="studio-form-success" role="status" tabindex="-1">
+     <h3>{{ section.settings.success_heading | escape }}</h3>
+     <p>{{ section.settings.success_text | escape }}</p>
+    </div>
+   {% else %}
+    {% if form.errors %}
+     <div class="studio-form-errors" role="alert">{{ form.errors | default_errors }}</div>
+    {% endif %}
+    <input type="hidden" name="contact[subject]" value="Kestrel Larch Originals - Custom project inquiry">
+    <fieldset>
+     <legend>{{ section.settings.contact_legend | escape }}</legend>
+     <div class="studio-form-row">
+      <div><label for="KLO-Name">Name <span aria-hidden="true">*</span></label><input id="KLO-Name" type="text" name="contact[name]" autocomplete="name" value="{{ form.name | escape }}" required></div>
+      <div><label for="KLO-Email">Email <span aria-hidden="true">*</span></label><input id="KLO-Email" type="email" name="contact[email]" autocomplete="email" value="{{ form.email | escape }}" required></div>
+     </div>
+     <div class="studio-form-row">
+      <div><label for="KLO-Phone">Phone (optional)</label><input id="KLO-Phone" type="tel" name="contact[phone]" autocomplete="tel"></div>
+      <div><label for="KLO-Project-Type">Project type <span aria-hidden="true">*</span></label>
+       <select id="KLO-Project-Type" name="contact[Project type]" required>
+        <option value="">Select a project</option>
+        <option value="Cutting board">Cutting board</option>
+        <option value="Cribbage board">Cribbage board</option>
+        <option value="Game board">Game board</option>
+        <option value="Cheese slicer">Cheese slicer</option>
+        <option value="Coasters">Coasters</option>
+        <option value="Bottle opener">Bottle opener</option>
+        <option value="Other custom project">Other custom project</option>
+       </select>
+      </div>
+     </div>
+    </fieldset>
+    <fieldset>
+     <legend>{{ section.settings.details_legend | escape }}</legend>
+     <div class="studio-form-row">
+      <div><label for="KLO-Dimensions">Approximate dimensions</label><input id="KLO-Dimensions" type="text" name="contact[Dimensions]" placeholder="e.g., 12 × 16 inches"></div>
+      <div><label for="KLO-Wood">Preferred wood</label><input id="KLO-Wood" type="text" name="contact[Wood preference]" placeholder="e.g., walnut and curly maple"></div>
+     </div>
+     <div class="studio-form-row">
+      <div><label for="KLO-Personalization">Inlay, initials or personalization</label><input id="KLO-Personalization" type="text" name="contact[Personalization]" placeholder="Names, initials, wood inlay, or epoxy"></div>
+      <div><label for="KLO-Budget">Approximate budget (USD)</label><input id="KLO-Budget" type="text" name="contact[Budget]" placeholder="Optional price range"></div>
+     </div>
+     <div class="studio-form-row">
+      <div><label for="KLO-Timing">Preferred timing</label><input id="KLO-Timing" type="text" name="contact[Preferred timeline]" placeholder="e.g., before a birthday"></div>
+      <div><label for="KLO-Reference">Reference link (optional)</label><input id="KLO-Reference" type="url" name="contact[Reference URL]" placeholder="https://example.com/reference"></div>
+     </div>
+     <div><label for="KLO-Description">Tell us about your idea <span aria-hidden="true">*</span></label><textarea id="KLO-Description" name="contact[body]" rows="6" required placeholder="What would you like to create, and who is it for?"></textarea></div>
+    </fieldset>
+    <p class="studio-reference-note"><strong>Have reference images?</strong> Secure direct photo uploads are not enabled yet. You can share a public reference link above, or arrange to send images after your inquiry. Please avoid including sensitive details.</p>
+    <p class="studio-form-legal">{{ section.settings.disclaimer | escape }}</p>
+    <button class="button" type="submit">{{ section.settings.submit_label | escape }} <span aria-hidden="true">↗</span></button>
+   {% endif %}
+  {% endform %}
+ </div>
+</section>
 {% schema %}
 {
-  "name": "Custom project request",
-  "settings": []
+ "name":"Custom quote inquiry",
+ "settings":[
+  {"type":"text","id":"eyebrow","label":"Eyebrow","default":"START THE CONVERSATION"},
+  {"type":"text","id":"heading","label":"Form headline","default":"Tell us what you have in mind."},
+  {"type":"textarea","id":"intro","label":"Introduction","default":"Share the details you know. We'll review your ideas and respond about the possibilities."},
+  {"type":"text","id":"contact_legend","label":"Contact details heading","default":"How can we reach you?"},
+  {"type":"text","id":"details_legend","label":"Project details heading","default":"Tell us about your project"},
+  {"type":"textarea","id":"disclaimer","label":"Inquiry disclaimer","default":"This form starts a conversation. Submitting it does not place an order, confirm a quote, or guarantee a delivery date."},
+  {"type":"text","id":"submit_label","label":"Submit button","default":"Send project inquiry"},
+  {"type":"text","id":"success_heading","label":"Success headline","default":"Your inquiry has been sent."},
+  {"type":"textarea","id":"success_text","label":"Success message","default":"Thank you for sharing your project idea. We'll review the details and follow up using the contact information you supplied."}
+ ],
+ "presets":[{"name":"Custom quote inquiry"}]
 }
 {% endschema %}

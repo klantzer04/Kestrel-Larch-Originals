@@ -1,0 +1,38 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-collection-studio",
+      "settings": {
+        "eyebrow": "EVERYDAY ORIGINALS",
+        "intro": "Personalized keepsakes with a useful purpose and a memorable character.",
+        "hero_image": "shopify://shop_images/KLO_Category_Bottle_Openers_01.png",
+        "gallery_heading": "Crafted for the everyday."
+      },
+      "blocks": {
+        "example1": {
+          "type": "inspiration",
+          "settings": {
+            "title": "Personalized bottle openers",
+            "caption": "A thoughtful gift with a useful purpose.",
+            "image": "shopify://shop_images/KLO_Product_13_Bottle_Openers_Approved.png"
+          }
+        }
+      },
+      "block_order": [
+        "example1"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

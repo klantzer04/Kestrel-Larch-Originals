@@ -1,0 +1,29 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product-studio",
+      "settings": {
+        "category_collection": "cutting-boards",
+        "eyebrow": "CRAFTED FOR THE KITCHEN",
+        "subtitle": "Original cutting boards with character worth sharing.",
+        "custom_heading": "A cutting board of your own.",
+        "custom_copy": "Choose a wood combination, consider an inlay, or share a meaningful name or design. Special layouts and sizes begin with a quote.",
+        "materials_note": "Each board's wood species, construction and size are listed with that design. Natural grain and color are unique to every piece.",
+        "care_note": "Hand-wash with mild soap, dry promptly, and never immerse in water or place in a dishwasher. Follow any finish-specific care instructions supplied with the board.",
+        "allow_personalization": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

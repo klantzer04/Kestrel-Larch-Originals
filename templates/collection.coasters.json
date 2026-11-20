@@ -1,0 +1,38 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-collection-studio",
+      "settings": {
+        "eyebrow": "THE LITTLE DETAILS",
+        "intro": "Small pieces that make everyday spaces feel personal.",
+        "hero_image": "shopify://shop_images/KLO_Category_Coasters_01.png",
+        "gallery_heading": "Coasters with character."
+      },
+      "blocks": {
+        "example1": {
+          "type": "inspiration",
+          "settings": {
+            "title": "Personalized coaster set",
+            "caption": "A small handcrafted detail, made personal.",
+            "image": "shopify://shop_images/KLO_Product_12_Coaster_Set.png"
+          }
+        }
+      },
+      "block_order": [
+        "example1"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

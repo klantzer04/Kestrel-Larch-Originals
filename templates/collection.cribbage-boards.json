@@ -1,0 +1,55 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-collection-studio",
+      "settings": {
+        "eyebrow": "GATHER ROUND",
+        "intro": "A game-night favorite with expressive wood grain and room for personal details.",
+        "hero_image": "shopify://shop_images/KLO_Category_Cribbage_Boards_01.png"
+      },
+      "blocks": {
+        "example1": {
+          "type": "inspiration",
+          "settings": {
+            "title": "Personalized walnut",
+            "caption": "A familiar game made personal.",
+            "image": "shopify://shop_images/KLO_Product_05_Personalized_Walnut_Cribbage_Board.png"
+          }
+        },
+        "example2": {
+          "type": "inspiration",
+          "settings": {
+            "title": "Two-tone details",
+            "caption": "Contrasting woods and a crafted finish.",
+            "image": "shopify://shop_images/KLO_Product_06_Two_Tone_Cribbage_Board.png"
+          }
+        },
+        "example3": {
+          "type": "inspiration",
+          "settings": {
+            "title": "Round walnut",
+            "caption": "Classic play in a striking silhouette.",
+            "image": "shopify://shop_images/KLO_Product_07_Round_Walnut_Cribbage_Board.png"
+          }
+        }
+      },
+      "block_order": [
+        "example1",
+        "example2",
+        "example3"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

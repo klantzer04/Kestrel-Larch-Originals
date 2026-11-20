@@ -1,0 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-collection-studio",
+      "settings": {
+        "eyebrow": "THE EVERYDAY, MADE ORIGINAL",
+        "intro": "Natural grain, distinctive inlays, and thoughtful personalization for the heart of your kitchen.",
+        "hero_image": "shopify://shop_images/KLO_Category_Cutting_Boards_01.png"
+      },
+      "blocks": {
+        "example1": {
+          "type": "inspiration",
+          "settings": {
+            "title": "Personalized end-grain",
+            "caption": "A personal touch for the kitchen.",
+            "image": "shopify://shop_images/KLO_Product_01_Personalized_End_Grain_Board.png"
+          }
+        },
+        "example2": {
+          "type": "inspiration",
+          "settings": {
+            "title": "Mountain inlay",
+            "caption": "Nature-inspired details in contrasting wood.",
+            "image": "shopify://shop_images/KLO_Product_02_Mountain_Cutting_Board.png"
+          }
+        },
+        "example3": {
+          "type": "inspiration",
+          "settings": {
+            "title": "White epoxy detail",
+            "caption": "Clean, sculpted contrast in walnut.",
+            "image": "shopify://shop_images/KLO_Product_03_Walnut_White_Epoxy_Cutting_Board.png"
+          }
+        },
+        "example4": {
+          "type": "inspiration",
+          "settings": {
+            "title": "Wildlife design",
+            "caption": "A little of the outdoors, brought home.",
+            "image": "shopify://shop_images/KLO_Product_04_Wildlife_Cutting_Board.png"
+          }
+        }
+      },
+      "block_order": [
+        "example1",
+        "example2",
+        "example3",
+        "example4"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

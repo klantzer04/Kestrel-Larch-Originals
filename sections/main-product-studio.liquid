@@ -1,0 +1,166 @@
+<section class="section container studio-product">
+  {% assign studio_collection = section.settings.category_collection %}
+  {% assign studio_variant = product.selected_or_first_available_variant %}
+  <nav class="studio-breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ routes.root_url }}">Home</a><span aria-hidden="true">/</span>
+    {% if studio_collection != blank %}
+      <a href="{{ studio_collection.url }}">{{ studio_collection.title | escape }}</a><span aria-hidden="true">/</span>
+    {% endif %}
+    <span aria-current="page">{{ product.title | escape }}</span>
+  </nav>
+  <div class="studio-product-layout">
+    <div class="studio-product-gallery" aria-label="Product photography">
+      {% if product.media.size > 0 %}
+        {% for media in product.media %}
+          <div class="studio-product-media{% if forloop.first %} is-primary{% endif %}">
+            {% case media.media_type %}
+              {% when 'image' %}
+                {% assign studio_image_alt = media.alt | default: product.title %}
+                {{ media | image_url: width: 1800 | image_tag: widths: '360, 600, 900, 1300, 1800', sizes: '(min-width: 900px) 53vw, 100vw', loading: 'lazy', alt: studio_image_alt }}
+              {% when 'video' %}
+                {{ media | video_tag: controls: true }}
+              {% when 'external_video' %}
+                {{ media | external_video_tag }}
+              {% when 'model' %}
+                {{ media | model_viewer_tag }}
+            {% endcase %}
+          </div>
+        {% endfor %}
+      {% else %}
+        <div class="studio-product-media is-primary">
+          {% if section.settings.fallback_image != blank %}
+            {% assign studio_fallback_alt = section.settings.fallback_image.alt | default: product.title %}
+            {{ section.settings.fallback_image | image_url: width: 1600 | image_tag: widths: '400, 700, 1100, 1600', sizes: '(min-width: 900px) 53vw, 100vw', loading: 'lazy', alt: studio_fallback_alt }}
+          {% else %}
+            {% render 'placeholder', label: product.title %}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+    <div class="studio-product-info">
+      <p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      <h1>{{ product.title | escape }}</h1>
+      {% if section.settings.subtitle != blank %}
+        <p class="studio-product-subtitle">{{ section.settings.subtitle | escape }}</p>
+      {% endif %}
+      {% if product.description != blank %}
+        <div class="studio-product-description richtext">{{ product.description }}</div>
+      {% endif %}
+      {% if product.price > 0 %}
+        <p class="studio-product-price">
+          {% if product.price_varies %}From {% endif %}{{ product.price_min | money }}
+        </p>
+        {% form 'product', product, id: 'KLOProductForm', class: 'studio-product-form' %}
+          {% if product.variants.size > 1 %}
+            <label for="KLOVariant-{{ section.id }}">{{ section.settings.variant_label | escape }}</label>
+            <select name="id" id="KLOVariant-{{ section.id }}" required>
+              {% for variant in product.variants %}
+                <option value="{{ variant.id }}"{% if variant == studio_variant %} selected{% endif %}{% unless variant.available %} disabled{% endunless %}>
+                  {{ variant.title | escape }} — {{ variant.price | money }}{% unless variant.available %} (Unavailable){% endunless %}
+                </option>
+              {% endfor %}
+            </select>
+          {% else %}
+            <input type="hidden" name="id" value="{{ studio_variant.id }}">
+          {% endif %}
+          {% if section.settings.allow_personalization %}
+            <label for="KLOPersonalization-{{ section.id }}">{{ section.settings.personalization_label | escape }}</label>
+            <input id="KLOPersonalization-{{ section.id }}" type="text" name="properties[Personalization]" maxlength="120" placeholder="{{ section.settings.personalization_placeholder | escape }}">
+            <p class="studio-field-hint">{{ section.settings.personalization_note | escape }}</p>
+          {% endif %}
+          <div class="studio-purchase-row">
+            <div class="studio-quantity">
+              <label for="KLOQuantity-{{ section.id }}">Quantity</label>
+              <input id="KLOQuantity-{{ section.id }}" type="number" name="quantity" min="1" step="1" value="1" required>
+            </div>
+            <button type="submit" name="add" class="button studio-add-button"{% unless product.available %} disabled{% endunless %}>
+              {% if product.available %}{{ section.settings.cart_button | escape }}{% else %}Currently unavailable{% endif %}
+            </button>
+          </div>
+          {% if form.errors %}<div class="studio-form-errors" role="alert">{{ form.errors | default_errors }}</div>{% endif %}
+        {% endform %}
+      {% else %}
+        <div class="studio-price-pending">
+          <p class="eyebrow">{{ section.settings.pending_eyebrow | escape }}</p>
+          <p>{{ section.settings.pending_copy | escape }}</p>
+        </div>
+      {% endif %}
+      <div class="studio-product-custom">
+        <p class="eyebrow">{{ section.settings.custom_eyebrow | escape }}</p>
+        <h2>{{ section.settings.custom_heading | escape }}</h2>
+        <p>{{ section.settings.custom_copy | escape }}</p>
+        <a class="studio-text-link" href="{{ section.settings.quote_link | default: '/pages/custom-order#custom-quote-form' }}">{{ section.settings.quote_button | escape }} <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="studio-product-information">
+        {% if section.settings.materials_note != blank %}
+          <details>
+            <summary>{{ section.settings.materials_title | escape }}</summary>
+            <p>{{ section.settings.materials_note | escape }}</p>
+          </details>
+        {% endif %}
+        {% if section.settings.care_note != blank %}
+          <details>
+            <summary>{{ section.settings.care_title | escape }}</summary>
+            <p>{{ section.settings.care_note | escape }}</p>
+          </details>
+        {% endif %}
+        {% if section.settings.delivery_note != blank %}
+          <details>
+            <summary>{{ section.settings.delivery_title | escape }}</summary>
+            <p>{{ section.settings.delivery_note | escape }}</p>
+          </details>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% if studio_collection != blank and studio_collection.products_count > 1 %}
+    <section class="studio-related-products" aria-labelledby="KloRelated-{{ section.id }}">
+      <div class="studio-section-header">
+        <div><p class="eyebrow">{{ section.settings.related_eyebrow | escape }}</p><h2 id="KloRelated-{{ section.id }}">{{ section.settings.related_heading | escape }}</h2></div>
+        <a class="studio-text-link" href="{{ studio_collection.url }}">View collection <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="product-grid">
+        {% assign related_shown = 0 %}
+        {% for related_product in studio_collection.products %}
+          {% if related_product.id != product.id and related_shown < 3 %}
+            {% render 'product-card', product: related_product %}
+            {% assign related_shown = related_shown | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+</section>
+{% schema %}
+{
+ "name":"Floating Studio product",
+ "settings":[
+  {"type":"collection","id":"category_collection","label":"Related category collection"},
+  {"type":"text","id":"eyebrow","label":"Product eyebrow","default":"KESTREL LARCH ORIGINALS"},
+  {"type":"text","id":"subtitle","label":"Product subtitle","default":"Thoughtfully crafted in wood."},
+  {"type":"image_picker","id":"fallback_image","label":"Approved image when product has no media"},
+  {"type":"text","id":"variant_label","label":"Variant selector label","default":"Choose your option"},
+  {"type":"checkbox","id":"allow_personalization","label":"Allow text personalization included in the listed price","default":false},
+  {"type":"text","id":"personalization_label","label":"Personalization input label","default":"Personalization (optional)"},
+  {"type":"text","id":"personalization_placeholder","label":"Personalization placeholder","default":"Enter wording exactly as requested"},
+  {"type":"textarea","id":"personalization_note","label":"Personalization guidance","default":"Use this only if personalization is included in the listed price. For custom artwork, dimensions or inlays, request a quote."},
+  {"type":"text","id":"cart_button","label":"Add-to-cart button","default":"Add to bag"},
+  {"type":"text","id":"pending_eyebrow","label":"Price pending eyebrow","default":"DESIGN IN PROGRESS"},
+  {"type":"textarea","id":"pending_copy","label":"Price pending message","default":"Pricing and ordering details are being finalized. Use the custom inquiry link below to discuss this piece."},
+  {"type":"text","id":"custom_eyebrow","label":"Custom inquiry eyebrow","default":"A PIECE OF YOUR OWN"},
+  {"type":"text","id":"custom_heading","label":"Custom inquiry headline","default":"Make it personal."},
+  {"type":"textarea","id":"custom_copy","label":"Custom inquiry description","default":"Different dimensions, a personalized inlay, or your own design? Tell us what you have in mind and we'll discuss what's possible."},
+  {"type":"url","id":"quote_link","label":"Custom quote destination"},
+  {"type":"text","id":"quote_button","label":"Custom quote link text","default":"Request a custom quote"},
+  {"type":"text","id":"materials_title","label":"Materials heading","default":"Materials & craftsmanship"},
+  {"type":"textarea","id":"materials_note","label":"Materials information","default":"Wood grain, color, and figure vary naturally. Product-specific materials and dimensions are provided in the individual listing."},
+  {"type":"text","id":"care_title","label":"Care heading","default":"Care & keeping"},
+  {"type":"textarea","id":"care_note","label":"Care instructions","default":"Keep away from prolonged moisture and extreme heat. Follow the care guidance provided with your finished piece."},
+  {"type":"text","id":"delivery_title","label":"Shipping heading","default":"Fulfillment & delivery"},
+  {"type":"textarea","id":"delivery_note","label":"Shipping information","default":"Availability and lead times vary by design. Final delivery options and charges are presented at checkout or agreed as part of a custom quote."},
+  {"type":"text","id":"related_eyebrow","label":"Related section eyebrow","default":"EXPLORE MORE"},
+  {"type":"text","id":"related_heading","label":"Related section heading","default":"More from the collection"}
+ ],
+ "presets":[{"name":"Floating Studio product"}]
+}
+{% endschema %}
