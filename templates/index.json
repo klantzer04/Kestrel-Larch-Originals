@@ -1,10 +1,19 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
       "type": "hero",
       "settings": {
         "heading": "Original by design. Personal by nature.",
-        "image": "shopify://shop_images/KLO_Homepage_Hero_01.webp"
+        "image": "shopify://shop_images/KLO_Homepage_Hero_01.png"
       }
     },
     "categories": {
@@ -15,7 +24,7 @@
           "settings": {
             "title": "Cribbage boards",
             "caption": "A little friendly competition.",
-            "image": "shopify://shop_images/KLO_Category_Cribbage_Boards_01.webp"
+            "image": "shopify://shop_images/KLO_Category_Cribbage_Boards_01.png"
           }
         },
         "1": {
@@ -23,7 +32,7 @@
           "settings": {
             "title": "Cutting boards",
             "caption": "At the heart of the kitchen.",
-            "image": "shopify://shop_images/KLO_Category_Cutting_Boards_01.webp"
+            "image": "shopify://shop_images/KLO_Category_Cutting_Boards_01.png"
           }
         },
         "2": {
@@ -31,7 +40,7 @@
           "settings": {
             "title": "Cheese slicers",
             "caption": "Something worth sharing.",
-            "image": "shopify://shop_images/KLO_Category_Cheese_Slicers_01.webp"
+            "image": "shopify://shop_images/KLO_Category_Cheese_Slicers_01.png"
           }
         },
         "3": {
@@ -39,14 +48,15 @@
           "settings": {
             "title": "Coasters",
             "caption": "A place for your pause.",
-            "image": "shopify://shop_images/KLO_Category_Coasters_01.webp"
+            "image": "shopify://shop_images/KLO_Category_Coasters_01.png"
           }
         },
         "4": {
           "type": "category",
           "settings": {
             "title": "Custom projects",
-            "caption": "An idea made personal."
+            "caption": "An idea made personal.",
+            "image": "shopify://shop_images/KLO_Product_16_Homepage_Collection_Approved.png"
           }
         },
         "5": {
@@ -54,7 +64,7 @@
           "settings": {
             "title": "Bottle openers",
             "caption": "Small details. Lasting character.",
-            "image": "shopify://shop_images/KLO_Category_Bottle_Openers_01.webp"
+            "image": "shopify://shop_images/KLO_Category_Bottle_Openers_01.png"
           }
         },
         "6": {
@@ -62,7 +72,7 @@
           "settings": {
             "title": "Game boards",
             "caption": "For the moments around the table.",
-            "image": "shopify://shop_images/KLO_Category_Game_Boards_01_Approved.webp"
+            "image": "shopify://shop_images/KLO_Category_Game_Boards_01_Approved.png"
           }
         }
       },
@@ -74,16 +84,22 @@
         "5",
         "6",
         "4"
-      ]
+      ],
+      "settings": {}
     },
     "featured": {
-      "type": "featured-products"
+      "type": "featured-products",
+      "settings": {
+        "image": "shopify://shop_images/KLO_Product_16_Homepage_Collection_Approved.png"
+      }
     },
     "story": {
-      "type": "brand-story"
+      "type": "brand-story",
+      "settings": {}
     },
     "custom": {
-      "type": "custom-callout"
+      "type": "custom-callout",
+      "settings": {}
     },
     "work": {
       "type": "custom-work-showcase",
@@ -91,26 +107,27 @@
         "game": {
           "type": "piece",
           "settings": {
+            "image": "shopify://shop_images/KLO_Product_07_Round_Walnut_Cribbage_Board.png",
             "title": "Custom game boards",
             "description": "A gathering piece with room for a personal design.",
-            "alt": "Round walnut cribbage board with decorative inlay",
-            "image": "shopify://shop_images/KLO_Product_07_Round_Walnut_Cribbage_Board.webp"
+            "alt": "Round walnut cribbage board with decorative inlay"
           }
         },
         "cutting": {
           "type": "piece",
           "settings": {
+            "image": "shopify://shop_images/KLO_Product_01_Personalized_End_Grain_Board.png",
             "title": "Personalized cutting boards",
             "description": "A familiar kitchen essential, made personal.",
-            "alt": "Personalized end-grain wooden cutting board",
-            "image": "shopify://shop_images/KLO_Product_01_Personalized_End_Grain_Board.webp"
+            "alt": "Personalized end-grain wooden cutting board"
           }
         }
       },
       "block_order": [
         "game",
         "cutting"
-      ]
+      ],
+      "settings": {}
     }
   },
   "order": [

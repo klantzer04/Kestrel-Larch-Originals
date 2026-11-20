@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -6,73 +15,105 @@
         "photo1": {
           "type": "project",
           "settings": {
-            "title": "End-grain cutting board",
-            "description": "Personalized woodwork for the kitchen",
-            "image": "shopify://shop_images/KLO_Product_01_Personalized_End_Grain_Board.webp"
+            "title": "Personalized end-grain cutting board",
+            "description": "End-grain wooden cutting board with personalized inlay",
+            "image": "shopify://shop_images/KLO_Product_01_Personalized_End_Grain_Board.png"
           }
         },
         "photo2": {
           "type": "project",
           "settings": {
-            "title": "Mountain inlay cutting board",
-            "description": "Wood-on-wood inlay with a mountain motif",
-            "image": "shopify://shop_images/KLO_Product_02_Mountain_Cutting_Board.webp"
+            "title": "Mountain cutting board",
+            "description": "Contrasting wood inlay with a mountain motif",
+            "image": "shopify://shop_images/KLO_Product_02_Mountain_Cutting_Board.png"
           }
         },
         "photo3": {
           "type": "project",
           "settings": {
-            "title": "Wildlife cutting board",
-            "description": "Nature-inspired customized woodwork",
-            "image": "shopify://shop_images/KLO_Product_04_Wildlife_Cutting_Board.webp"
+            "title": "White epoxy cutting board",
+            "description": "Walnut cutting board with white epoxy detailing",
+            "image": "shopify://shop_images/KLO_Product_03_Walnut_White_Epoxy_Cutting_Board.png"
           }
         },
         "photo4": {
           "type": "project",
           "settings": {
-            "title": "Personalized cribbage board",
-            "description": "A custom game board made for gathering",
-            "image": "shopify://shop_images/KLO_Product_05_Personalized_Walnut_Cribbage_Board.webp"
+            "title": "Wildlife cutting board",
+            "description": "Elk and wilderness design in a wooden cutting board",
+            "image": "shopify://shop_images/KLO_Product_04_Wildlife_Cutting_Board.png"
           }
         },
         "photo5": {
           "type": "project",
           "settings": {
-            "title": "Two-tone cribbage board",
-            "description": "Contrasting wood species and custom inlay",
-            "image": "shopify://shop_images/KLO_Product_06_Two_Tone_Cribbage_Board.webp"
+            "title": "Personalized cribbage board",
+            "description": "A custom wooden cribbage board",
+            "image": "shopify://shop_images/KLO_Product_05_Personalized_Walnut_Cribbage_Board.png"
           }
         },
         "photo6": {
           "type": "project",
           "settings": {
-            "title": "Mountain cheese slicer",
-            "description": "Wood-inlay cheese slicer design",
-            "image": "shopify://shop_images/KLO_Product_08_Mountain_Cheese_Slicer.webp"
+            "title": "Two-tone cribbage board",
+            "description": "Contrasting wood species and decorative inlay",
+            "image": "shopify://shop_images/KLO_Product_06_Two_Tone_Cribbage_Board.png"
           }
         },
         "photo7": {
           "type": "project",
           "settings": {
-            "title": "Wildlife cheese slicer",
-            "description": "A handcrafted serving piece with inlay",
-            "image": "shopify://shop_images/KLO_Product_09_Elk_Cheese_Slicer.webp"
+            "title": "Round walnut cribbage board",
+            "description": "Round walnut cribbage board with inlaid design",
+            "image": "shopify://shop_images/KLO_Product_07_Round_Walnut_Cribbage_Board.png"
           }
         },
         "photo8": {
           "type": "project",
           "settings": {
-            "title": "Coaster collection",
-            "description": "Personalized wooden coaster designs",
-            "image": "shopify://shop_images/KLO_Product_12_Coaster_Set.webp"
+            "title": "Mountain cheese slicer",
+            "description": "Curly maple cheese slicer with mountain inlay",
+            "image": "shopify://shop_images/KLO_Product_08_Mountain_Cheese_Slicer.png"
           }
         },
         "photo9": {
           "type": "project",
           "settings": {
-            "title": "Bottle opener collection",
-            "description": "Handcrafted personalized bottle openers",
-            "image": "shopify://shop_images/KLO_Product_13_Bottle_Openers_Approved.webp"
+            "title": "Elk cheese slicer",
+            "description": "Curly maple cheese slicer with elk inlay",
+            "image": "shopify://shop_images/KLO_Product_09_Elk_Cheese_Slicer.png"
+          }
+        },
+        "photo10": {
+          "type": "project",
+          "settings": {
+            "title": "Trout cheese slicer",
+            "description": "Curly maple cheese slicer with trout design",
+            "image": "shopify://shop_images/KLO_Product_10_Trout_Cheese_Slicer.png"
+          }
+        },
+        "photo11": {
+          "type": "project",
+          "settings": {
+            "title": "Monogram cheese slicer",
+            "description": "Curly maple cheese slicer with personalized monogram",
+            "image": "shopify://shop_images/KLO_Product_11_Monogram_M_Cheese_Slicer.png"
+          }
+        },
+        "photo12": {
+          "type": "project",
+          "settings": {
+            "title": "Wooden coaster collection",
+            "description": "Personalized wooden coaster designs",
+            "image": "shopify://shop_images/KLO_Product_12_Coaster_Set.png"
+          }
+        },
+        "photo13": {
+          "type": "project",
+          "settings": {
+            "title": "Wooden bottle openers",
+            "description": "Personalized wooden bottle opener designs",
+            "image": "shopify://shop_images/KLO_Product_13_Bottle_Openers_Approved.png"
           }
         }
       },
@@ -85,8 +126,13 @@
         "photo6",
         "photo7",
         "photo8",
-        "photo9"
-      ]
+        "photo9",
+        "photo10",
+        "photo11",
+        "photo12",
+        "photo13"
+      ],
+      "settings": {}
     }
   },
   "order": [
