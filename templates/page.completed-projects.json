@@ -1,7 +1,92 @@
 {
   "sections": {
     "main": {
-      "type": "project-gallery"
+      "type": "project-gallery",
+      "blocks": {
+        "photo1": {
+          "type": "project",
+          "settings": {
+            "title": "End-grain cutting board",
+            "description": "Personalized woodwork for the kitchen",
+            "image": "shopify://shop_images/KLO_Product_01_Personalized_End_Grain_Board.webp"
+          }
+        },
+        "photo2": {
+          "type": "project",
+          "settings": {
+            "title": "Mountain inlay cutting board",
+            "description": "Wood-on-wood inlay with a mountain motif",
+            "image": "shopify://shop_images/KLO_Product_02_Mountain_Cutting_Board.webp"
+          }
+        },
+        "photo3": {
+          "type": "project",
+          "settings": {
+            "title": "Wildlife cutting board",
+            "description": "Nature-inspired customized woodwork",
+            "image": "shopify://shop_images/KLO_Product_04_Wildlife_Cutting_Board.webp"
+          }
+        },
+        "photo4": {
+          "type": "project",
+          "settings": {
+            "title": "Personalized cribbage board",
+            "description": "A custom game board made for gathering",
+            "image": "shopify://shop_images/KLO_Product_05_Personalized_Walnut_Cribbage_Board.webp"
+          }
+        },
+        "photo5": {
+          "type": "project",
+          "settings": {
+            "title": "Two-tone cribbage board",
+            "description": "Contrasting wood species and custom inlay",
+            "image": "shopify://shop_images/KLO_Product_06_Two_Tone_Cribbage_Board.webp"
+          }
+        },
+        "photo6": {
+          "type": "project",
+          "settings": {
+            "title": "Mountain cheese slicer",
+            "description": "Wood-inlay cheese slicer design",
+            "image": "shopify://shop_images/KLO_Product_08_Mountain_Cheese_Slicer.webp"
+          }
+        },
+        "photo7": {
+          "type": "project",
+          "settings": {
+            "title": "Wildlife cheese slicer",
+            "description": "A handcrafted serving piece with inlay",
+            "image": "shopify://shop_images/KLO_Product_09_Elk_Cheese_Slicer.webp"
+          }
+        },
+        "photo8": {
+          "type": "project",
+          "settings": {
+            "title": "Coaster collection",
+            "description": "Personalized wooden coaster designs",
+            "image": "shopify://shop_images/KLO_Product_12_Coaster_Set.webp"
+          }
+        },
+        "photo9": {
+          "type": "project",
+          "settings": {
+            "title": "Bottle opener collection",
+            "description": "Handcrafted personalized bottle openers",
+            "image": "shopify://shop_images/KLO_Product_13_Bottle_Openers_Approved.webp"
+          }
+        }
+      },
+      "block_order": [
+        "photo1",
+        "photo2",
+        "photo3",
+        "photo4",
+        "photo5",
+        "photo6",
+        "photo7",
+        "photo8",
+        "photo9"
+      ]
     }
   },
   "order": [
