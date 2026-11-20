@@ -410,3 +410,39 @@ body.design-midnight-slate{background:var(--midnight);color:var(--cream)}
  .design-midnight-slate .studio-quantity input{width:83px}
 }
 
+
+/* Cheese Slicers: product TYPES, not descriptions of photo motifs. */
+.design-midnight-slate .studio-collection--cheese-slicers .studio-inspiration-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;
+}
+.design-midnight-slate .studio-collection--cheese-slicers .studio-inspiration-piece h3{
+  display:flex;justify-content:space-between;align-items:baseline;gap:8px;
+  font:400 clamp(1.25rem,1.8vw,1.55rem)/1.25 Georgia,serif;
+  margin-top:17px;
+}
+.design-midnight-slate .studio-collection--cheese-slicers .studio-inspiration-image img{
+  aspect-ratio:4/5;object-fit:contain;
+}
+.design-midnight-slate .studio-inspiration-link{display:block;color:inherit;text-decoration:none}
+.design-midnight-slate .studio-inspiration-arrow{color:var(--copper);font-family:Arial,sans-serif;font-size:1.05rem}
+.design-midnight-slate .studio-inspiration-link:hover .studio-inspiration-image,
+.design-midnight-slate .studio-inspiration-link:focus-visible .studio-inspiration-image{
+  box-shadow:0 14px 30px rgba(0,0,0,.37),0 0 0 2px var(--tan);
+}
+.design-midnight-slate .studio-inspiration-link:hover h3,
+.design-midnight-slate .studio-inspiration-link:focus-visible h3{
+  text-decoration:underline;text-decoration-color:var(--copper);text-underline-offset:5px;
+}
+.design-midnight-slate .studio-collection--cheese-slicers .studio-inspiration-piece .photo-placeholder{
+  min-height:0;height:auto;aspect-ratio:4/5;border:0;border-radius:18px;
+  background:#304858;color:var(--cream);
+}
+.design-midnight-slate .studio-collection--cheese-slicers .studio-inspiration-piece .photo-placeholder small{color:var(--cream)}
+@media(max-width:1100px){
+ .design-midnight-slate .studio-collection--cheese-slicers .studio-inspiration-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+ .design-midnight-slate .studio-collection--cheese-slicers .studio-inspiration-grid{gap:24px 14px}
+ .design-midnight-slate .studio-collection--cheese-slicers .studio-inspiration-piece h3{font-size:1.14rem}
+}
+

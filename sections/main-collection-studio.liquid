@@ -1,4 +1,4 @@
-<section class="studio-collection section container">
+<section class="studio-collection studio-collection--{{ collection.handle | escape }} section container">
   <nav class="studio-breadcrumb" aria-label="Breadcrumb">
     <a href="{{ routes.root_url }}">Home</a><span aria-hidden="true">/</span>
     <span aria-current="page">{{ collection.title | escape }}</span>
@@ -31,14 +31,16 @@
       <div class="studio-inspiration-grid">
         {% for block in section.blocks %}
           <article class="studio-inspiration-piece" {{ block.shopify_attributes }}>
+            {% if block.settings.link != blank %}<a class="studio-inspiration-link" href="{{ block.settings.link }}">{% endif %}
             <div class="studio-inspiration-image">
               {% if block.settings.image != blank %}
                 {% assign studio_alt = block.settings.image.alt | default: block.settings.title %}
                 {{ block.settings.image | image_url: width: 1100 | image_tag: widths: '320, 480, 720, 900, 1100', sizes: '(min-width: 1100px) 26vw, (min-width: 600px) 46vw, 95vw', loading: 'lazy', alt: studio_alt }}
               {% else %}{% render 'placeholder', label: block.settings.title %}{% endif %}
             </div>
-            <h3>{{ block.settings.title | escape }}</h3>
+            <h3>{{ block.settings.title | escape }}{% if block.settings.link != blank %}<span class="studio-inspiration-arrow" aria-hidden="true">↗</span>{% endif %}</h3>
             {% if block.settings.caption != blank %}<p>{{ block.settings.caption | escape }}</p>{% endif %}
+            {% if block.settings.link != blank %}</a>{% endif %}
           </article>
         {% endfor %}
       </div>
@@ -89,7 +91,8 @@
  "blocks":[{"type":"inspiration","name":"Inspiration photograph","settings":[
   {"type":"image_picker","id":"image","label":"Approved product photo"},
   {"type":"text","id":"title","label":"Design title"},
-  {"type":"textarea","id":"caption","label":"Short description"}]}],
+  {"type":"textarea","id":"caption","label":"Short description"},
+  {"type":"url","id":"link","label":"Optional design type link"}]}],
  "max_blocks":12,
  "presets":[{"name":"Floating Studio"}]
 }
