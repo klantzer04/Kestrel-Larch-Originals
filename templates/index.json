@@ -3,7 +3,8 @@
     "hero": {
       "type": "hero",
       "settings": {
-        "heading": "Original by design. Personal by nature."
+        "heading": "Original by design. Personal by nature.",
+        "image": "shopify://shop_images/KLO_Homepage_Hero_01.webp"
       }
     },
     "categories": {
@@ -13,28 +14,32 @@
           "type": "category",
           "settings": {
             "title": "Cribbage boards",
-            "caption": "A little friendly competition."
+            "caption": "A little friendly competition.",
+            "image": "shopify://shop_images/KLO_Category_Cribbage_Boards_01.webp"
           }
         },
         "1": {
           "type": "category",
           "settings": {
             "title": "Cutting boards",
-            "caption": "At the heart of the kitchen."
+            "caption": "At the heart of the kitchen.",
+            "image": "shopify://shop_images/KLO_Category_Cutting_Boards_01.webp"
           }
         },
         "2": {
           "type": "category",
           "settings": {
             "title": "Cheese slicers",
-            "caption": "Something worth sharing."
+            "caption": "Something worth sharing.",
+            "image": "shopify://shop_images/KLO_Category_Cheese_Slicers_01.webp"
           }
         },
         "3": {
           "type": "category",
           "settings": {
             "title": "Coasters",
-            "caption": "A place for your pause."
+            "caption": "A place for your pause.",
+            "image": "shopify://shop_images/KLO_Category_Coasters_01.webp"
           }
         },
         "4": {
@@ -43,6 +48,22 @@
             "title": "Custom projects",
             "caption": "An idea made personal."
           }
+        },
+        "5": {
+          "type": "category",
+          "settings": {
+            "title": "Bottle openers",
+            "caption": "Small details. Lasting character.",
+            "image": "shopify://shop_images/KLO_Category_Bottle_Openers_01.webp"
+          }
+        },
+        "6": {
+          "type": "category",
+          "settings": {
+            "title": "Game boards",
+            "caption": "For the moments around the table.",
+            "image": "shopify://shop_images/KLO_Category_Game_Boards_01_Approved.webp"
+          }
         }
       },
       "block_order": [
@@ -50,6 +71,8 @@
         "1",
         "2",
         "3",
+        "5",
+        "6",
         "4"
       ]
     },
@@ -70,7 +93,8 @@
           "settings": {
             "title": "Custom game boards",
             "description": "A gathering piece with room for a personal design.",
-            "alt": "Octagonal wooden game board with a Trailside Supply Co. design"
+            "alt": "Round walnut cribbage board with decorative inlay",
+            "image": "shopify://shop_images/KLO_Product_07_Round_Walnut_Cribbage_Board.webp"
           }
         },
         "cutting": {
@@ -78,7 +102,8 @@
           "settings": {
             "title": "Personalized cutting boards",
             "description": "A familiar kitchen essential, made personal.",
-            "alt": "End-grain cutting board with Preston and Helen Anderson personalization"
+            "alt": "Personalized end-grain wooden cutting board",
+            "image": "shopify://shop_images/KLO_Product_01_Personalized_End_Grain_Board.webp"
           }
         }
       },
