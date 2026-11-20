@@ -68,3 +68,78 @@ body.design-midnight-slate{background:var(--midnight);color:var(--cream)}
  .design-midnight-slate .hero h1{font-size:clamp(2.1rem,7vw,3.5rem)}
  .design-midnight-slate .hero-image .photo-placeholder{aspect-ratio:4/3;min-height:240px}
 }
+
+/* Floating Gallery: softened, frameless category photography (approved option A). */
+.design-midnight-slate .category-section .section-heading{
+  border-bottom:0;
+  padding-bottom:0;
+  margin-bottom:36px;
+}
+.design-midnight-slate .category-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:42px 26px;
+}
+.design-midnight-slate .category-card{
+  display:block;
+  min-width:0;
+  background:transparent;
+  color:var(--cream);
+  border:0;
+  border-radius:0;
+}
+.design-midnight-slate .category-image{
+  overflow:hidden;
+  border-radius:20px;
+  background:var(--midnight);
+  box-shadow:0 12px 26px rgba(0,0,0,.28),0 3px 8px rgba(0,0,0,.15);
+}
+.design-midnight-slate .category-image img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:contain;
+  border-radius:inherit;
+  background:var(--midnight);
+}
+.design-midnight-slate .category-card .photo-placeholder{
+  border:0;
+  border-radius:inherit;
+}
+.design-midnight-slate .category-card h3{
+  padding:18px 4px 0;
+  margin:0 0 6px;
+  font-family:Georgia,serif;
+  font-weight:400;
+  font-size:clamp(1.05rem,1.5vw,1.25rem);
+  line-height:1.25;
+}
+.design-midnight-slate .category-card h3 span{color:var(--copper)}
+.design-midnight-slate .category-card p{
+  color:var(--cream);
+  opacity:.8;
+  font-size:.82rem;
+  line-height:1.5;
+  margin:0;
+  padding:0 4px;
+}
+.design-midnight-slate .category-card:hover .category-image,
+.design-midnight-slate .category-card:focus-visible .category-image{
+  box-shadow:0 14px 33px rgba(0,0,0,.38),0 0 0 2px var(--tan);
+}
+.design-midnight-slate .category-card:hover h3,
+.design-midnight-slate .category-card:focus-visible h3{
+  text-decoration:underline;
+  text-decoration-color:var(--copper);
+  text-underline-offset:5px;
+}
+@media (max-width:1100px){
+  .design-midnight-slate .category-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 22px}
+}
+@media (max-width:899px){
+  .design-midnight-slate .category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px}
+}
+@media (max-width:480px){
+  .design-midnight-slate .category-grid{gap:28px 14px}
+  .design-midnight-slate .category-image{border-radius:16px}
+  .design-midnight-slate .category-card h3{font-size:1.03rem;padding:14px 2px 0}
+  .design-midnight-slate .category-card p{font-size:.75rem;padding:0 2px}
+}
