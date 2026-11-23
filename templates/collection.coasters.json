@@ -13,22 +13,55 @@
       "type": "main-collection-studio",
       "settings": {
         "eyebrow": "THE LITTLE DETAILS",
-        "intro": "Small pieces that make everyday spaces feel personal.",
+        "intro": "Handcrafted coasters available with personalization, monograms, wood inlays, or designs made just for you.",
         "hero_image": "shopify://shop_images/KLO_Category_Coasters_01.png",
-        "gallery_heading": "Coasters with character."
+        "gallery_heading": "Choose your coaster style.",
+        "gallery_eyebrow": "FIND YOUR STYLE",
+        "gallery_intro": "Explore the types of coasters we can create. Each option can be tailored to your ideas.",
+        "empty_heading": "Your next set starts here.",
+        "empty_description": "We’re preparing the online collection. Have an idea for a set? Tell us what you’d like to create."
       },
       "blocks": {
-        "example1": {
+        "type_personalized": {
           "type": "inspiration",
           "settings": {
-            "title": "Personalized coaster set",
-            "caption": "A small handcrafted detail, made personal.",
+            "title": "Personalized Sets",
+            "caption": "",
+            "link": "/pages/custom-order#custom-quote-form",
             "image": "shopify://shop_images/KLO_Product_12_Coaster_Set.png"
+          }
+        },
+        "type_monogram": {
+          "type": "inspiration",
+          "settings": {
+            "title": "Monograms",
+            "caption": "",
+            "link": "/pages/custom-order#custom-quote-form"
+          }
+        },
+        "type_inlay": {
+          "type": "inspiration",
+          "settings": {
+            "title": "Wood Inlays",
+            "caption": "",
+            "link": "/pages/custom-order#custom-quote-form"
+          }
+        },
+        "type_custom": {
+          "type": "inspiration",
+          "settings": {
+            "title": "Custom Designs",
+            "caption": "",
+            "link": "/pages/custom-order#custom-quote-form",
+            "image": "shopify://shop_images/KLO_Category_Coasters_01.png"
           }
         }
       },
       "block_order": [
-        "example1"
+        "type_personalized",
+        "type_monogram",
+        "type_inlay",
+        "type_custom"
       ]
     }
   },
