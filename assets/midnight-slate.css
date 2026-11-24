@@ -469,3 +469,26 @@ body.design-midnight-slate{background:var(--midnight);color:var(--cream)}
  .design-midnight-slate .studio-collection--coasters .studio-inspiration-piece h3{font-size:1.14rem}
 }
 
+
+/* Bottle Opener style cards: preserve approved hardware-facing photography. */
+.design-midnight-slate .studio-collection--bottle-openers .studio-inspiration-grid{
+ grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;
+}
+.design-midnight-slate .studio-collection--bottle-openers .studio-inspiration-piece h3{
+ display:flex;justify-content:space-between;align-items:baseline;gap:8px;
+ font:400 clamp(1.25rem,1.8vw,1.55rem)/1.25 Georgia,serif;margin-top:17px;
+}
+.design-midnight-slate .studio-collection--bottle-openers .studio-inspiration-image img{
+ aspect-ratio:4/5;object-fit:contain;
+}
+.design-midnight-slate .studio-collection--bottle-openers .studio-inspiration-piece .photo-placeholder{
+ min-height:0;height:auto;aspect-ratio:4/5;border:0;border-radius:18px;background:#304858;color:var(--cream);
+}
+@media(max-width:1100px){
+ .design-midnight-slate .studio-collection--bottle-openers .studio-inspiration-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+ .design-midnight-slate .studio-collection--bottle-openers .studio-inspiration-grid{gap:24px 14px}
+ .design-midnight-slate .studio-collection--bottle-openers .studio-inspiration-piece h3{font-size:1.14rem}
+}
+
