@@ -13,48 +13,57 @@
       "type": "main-collection-studio",
       "settings": {
         "eyebrow": "THE EVERYDAY, MADE ORIGINAL",
-        "intro": "Natural grain, distinctive inlays, and thoughtful personalization for the heart of your kitchen.",
-        "hero_image": "shopify://shop_images/KLO_Category_Cutting_Boards_01.png"
+        "intro": "Explore personalized end-grain boards, wood-to-wood inlays, epoxy details, and original designs crafted for your kitchen.",
+        "hero_image": "shopify://shop_images/KLO_Category_Cutting_Boards_01.png",
+        "gallery_eyebrow": "FIND YOUR STYLE",
+        "gallery_heading": "Choose your cutting board style.",
+        "gallery_intro": "Browse the kinds of cutting boards we can make. Every style can be tailored to your project.",
+        "empty_heading": "A board made for your kitchen.",
+        "empty_description": "Our online collection is being prepared. Share your idea, favorite wood species, or personalization request to discuss a custom board."
       },
       "blocks": {
-        "example1": {
+        "type_personalized": {
           "type": "inspiration",
           "settings": {
-            "title": "Personalized end-grain",
-            "caption": "A personal touch for the kitchen.",
-            "image": "shopify://shop_images/KLO_Product_01_Personalized_End_Grain_Board.png"
+            "title": "Personalized",
+            "caption": "",
+            "image": "shopify://shop_images/KLO_Product_01_Personalized_End_Grain_Board.png",
+            "link": "/pages/custom-order#custom-quote-form"
           }
         },
-        "example2": {
+        "type_inlays": {
           "type": "inspiration",
           "settings": {
-            "title": "Mountain inlay",
-            "caption": "Nature-inspired details in contrasting wood.",
-            "image": "shopify://shop_images/KLO_Product_02_Mountain_Cutting_Board.png"
+            "title": "Wood Inlays",
+            "caption": "",
+            "image": "shopify://shop_images/KLO_Product_02_Mountain_Cutting_Board.png",
+            "link": "/pages/custom-order#custom-quote-form"
           }
         },
-        "example3": {
+        "type_epoxy": {
           "type": "inspiration",
           "settings": {
-            "title": "White epoxy detail",
-            "caption": "Clean, sculpted contrast in walnut.",
-            "image": "shopify://shop_images/KLO_Product_03_Walnut_White_Epoxy_Cutting_Board.png"
+            "title": "Epoxy Designs",
+            "caption": "",
+            "image": "shopify://shop_images/KLO_Product_03_Walnut_White_Epoxy_Cutting_Board.png",
+            "link": "/pages/custom-order#custom-quote-form"
           }
         },
-        "example4": {
+        "type_custom": {
           "type": "inspiration",
           "settings": {
-            "title": "Wildlife design",
-            "caption": "A little of the outdoors, brought home.",
-            "image": "shopify://shop_images/KLO_Product_04_Wildlife_Cutting_Board.png"
+            "title": "Custom Designs",
+            "caption": "",
+            "image": "shopify://shop_images/KLO_Product_04_Wildlife_Cutting_Board.png",
+            "link": "/pages/custom-order#custom-quote-form"
           }
         }
       },
       "block_order": [
-        "example1",
-        "example2",
-        "example3",
-        "example4"
+        "type_personalized",
+        "type_inlays",
+        "type_epoxy",
+        "type_custom"
       ]
     }
   },
